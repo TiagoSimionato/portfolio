@@ -27,6 +27,7 @@ const StyledSection = styled.section`
     font-size: 3rem;
     font-weight: 600;
   }
+  
   p {
     font-weight: 500;
     line-height: 1.1rem;
@@ -36,7 +37,7 @@ const StyledSection = styled.section`
 export function AboutMe() {
   return (
     <StyledSection id="aboutme">
-      <img src="https://github.com/tiago-simionato.png" alt="Autor da Página" />
+      <img src="assets/images/tiago.jpg" alt="Autor da Página" />
       <div className="container">
         <h2 className="secTitle">Sobre mim</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque temporibus dignissimos ex et asperiores possimus facilis tempore natus, optio architecto velit ratione doloribus illum praesentium, quidem odio! Praesentium, pariatur veniam?</p>

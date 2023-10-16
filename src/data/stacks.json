@@ -2,31 +2,43 @@
   {
     "name": "JavaSript",
     "imgPath": "assets/images/js.webp",
-    "imgAlt": "logo JavaSript",
+    "imgAlt": "logo javasript",
     "externalLink": "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
   },
   {
     "name": "HTML",
     "imgPath": "assets/images/html.webp",
-    "imgAlt": "logo HTML",
+    "imgAlt": "logo html",
     "externalLink": "https://developer.mozilla.org/pt-BR/docs/Web/HTML"
   },
   {
     "name": "CSS",
     "imgPath": "assets/images/css.webp",
-    "imgAlt": "logo CSS",
+    "imgAlt": "logo css",
     "externalLink": "https://developer.mozilla.org/pt-BR/docs/Web/CSS"
   },
   {
     "name": "React.JS",
     "imgPath": "assets/images/react.webp",
-    "imgAlt": "logo React",
+    "imgAlt": "logo react",
     "externalLink": "https://react.dev/"
   },
   {
     "name": "TypeScript",
     "imgPath": "assets/images/ts.webp",
-    "imgAlt": "logo TypeScript",
+    "imgAlt": "logo typescript",
+    "externalLink": "https://www.typescriptlang.org/"
+  },
+  {
+    "name": "PostgreSQL",
+    "imgPath": "assets/images/postgresql.png",
+    "imgAlt": "logo postgresql",
+    "externalLink": "https://www.typescriptlang.org/"
+  },
+  {
+    "name": "GitHub",
+    "imgPath": "assets/images/github.png",
+    "imgAlt": "logo github",
     "externalLink": "https://www.typescriptlang.org/"
   }
 ]

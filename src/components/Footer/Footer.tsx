@@ -9,9 +9,16 @@ const StyledFooter = styled.footer`
 `
 
 export function Footer() {
+  const minute = 1000 * 60;
+  const hour   = minute * 60;
+  const day    = hour * 24;
+  const year   = day * 365;
+  
+  const years = Math.round(Date.now() / year) + 1969;
+
   return (
     <StyledFooter>
-      &copy; | Tiago Henrique Simionato Machado
+      &copy; {years} | Tiago Henrique Simionato Machado
     </StyledFooter>
   );
 }

@@ -9,7 +9,7 @@ const StyledTechStack = styled.section`
   position: relative;
 
   h2 {
-    padding: 0 6.75rem 4rem 0;
+    padding: 0 6.75rem 4rem 3rem;
   }
 
   .preWrapper {
