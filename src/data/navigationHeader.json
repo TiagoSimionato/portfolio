@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Sobre Mim",
+    "link": "#aboutme"
+  },
+  {
+    "name": "Projetos",
+    "link": "#projects"
+  },
+  {
+    "name": "Tecnologias",
+    "link": "#techs"
+  }
+]

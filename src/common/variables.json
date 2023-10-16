@@ -1,0 +1,9 @@
+{
+  "colors": {
+    "primary": "#451952",
+    "secondary": "#662549",
+    "tertiary": "#AE445A",
+    "contrast": "#F39F5A",
+    "primaryTransparent": "#451952F3"
+  }
+}

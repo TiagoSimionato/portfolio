@@ -1,0 +1,32 @@
+[
+  {
+    "name": "JavaSript",
+    "imgPath": "assets/images/js.webp",
+    "imgAlt": "logo JavaSript",
+    "externalLink": "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
+  },
+  {
+    "name": "HTML",
+    "imgPath": "assets/images/html.webp",
+    "imgAlt": "logo HTML",
+    "externalLink": "https://developer.mozilla.org/pt-BR/docs/Web/HTML"
+  },
+  {
+    "name": "CSS",
+    "imgPath": "assets/images/css.webp",
+    "imgAlt": "logo CSS",
+    "externalLink": "https://developer.mozilla.org/pt-BR/docs/Web/CSS"
+  },
+  {
+    "name": "React.JS",
+    "imgPath": "assets/images/react.webp",
+    "imgAlt": "logo React",
+    "externalLink": "https://react.dev/"
+  },
+  {
+    "name": "TypeScript",
+    "imgPath": "assets/images/ts.webp",
+    "imgAlt": "logo TypeScript",
+    "externalLink": "https://www.typescriptlang.org/"
+  }
+]
