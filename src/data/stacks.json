@@ -33,12 +33,18 @@
     "name": "PostgreSQL",
     "imgPath": "assets/images/postgresql.webp",
     "imgAlt": "logo postgresql",
-    "externalLink": "https://www.typescriptlang.org/"
+    "externalLink": "https://www.postgresql.org/"
   },
   {
     "name": "GitHub",
     "imgPath": "assets/images/github.webp",
     "imgAlt": "logo github",
-    "externalLink": "https://www.typescriptlang.org/"
+    "externalLink": "https://github.com/"
+  },
+  {
+    "name": "TailWind CSS",
+    "imgPath": "assets/images/tailwindcss.webp",
+    "imgAlt": "logo tailwind css",
+    "externalLink": "https://tailwindcss.com/"
   }
 ]
