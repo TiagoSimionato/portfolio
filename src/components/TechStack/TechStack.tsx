@@ -19,7 +19,8 @@ const StyledTechStack = styled.section`
   .wrapper {
     animation: stackSlide infinite 35s linear;
     display: inline-block;
-    width: 100%;
+    min-width: 100%;
+    width: fit-content;
   }
 
   .preWrapper:hover .wrapper {

@@ -31,13 +31,13 @@
   },
   {
     "name": "PostgreSQL",
-    "imgPath": "assets/images/postgresql.png",
+    "imgPath": "assets/images/postgresql.webp",
     "imgAlt": "logo postgresql",
     "externalLink": "https://www.typescriptlang.org/"
   },
   {
     "name": "GitHub",
-    "imgPath": "assets/images/github.png",
+    "imgPath": "assets/images/github.webp",
     "imgAlt": "logo github",
     "externalLink": "https://www.typescriptlang.org/"
   }

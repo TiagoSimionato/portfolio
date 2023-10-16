@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const StyledStack = styled.div`
   width: fit-content;
+  margin: 0 1rem;
 
   img {
     width: 150px;
@@ -12,6 +13,7 @@ const StyledStack = styled.div`
   h3 {
     text-align: center;
     margin-top: 1rem;
+    margin-bottom: 0.5rem;
   }
 `
 
