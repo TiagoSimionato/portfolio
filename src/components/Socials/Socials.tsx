@@ -42,7 +42,12 @@ export function Socials() {
         <div className="vLine"></div>
         {socials.map((item, index) => //TODO FIX INDEX
           <li key={index}>
-            <a href={item.externalLink} className={item.className} target="_blank"></a>
+            <a
+              href={item.externalLink}
+              className={item.className}
+              target="_blank"
+              rel="noreferrer"
+            >{ }</a>
           </li>
         )}
         <div className="vLine"></div>

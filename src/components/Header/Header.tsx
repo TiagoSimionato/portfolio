@@ -22,7 +22,15 @@ const StyledHeader = styled.header`
 export function Header() {
   return (
     <StyledHeader>
-      <h1><a href="https://github.com/tiago-simionato" target="_blank">Tiago Henrique</a></h1>
+      <h1>
+        <a
+          href="https://github.com/tiago-simionato"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Tiago Henrique
+        </a>
+      </h1>
       <Navigation
         items={navHeaderData}
       />

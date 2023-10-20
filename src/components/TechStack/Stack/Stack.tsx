@@ -20,7 +20,11 @@ const StyledStack = styled.div`
 export function Stack({name, imgPath, imgAlt, externalLink} : IStack) {
   return (
     <StyledStack>
-      <a href={externalLink ? externalLink : '#'} target="_blank">
+      <a
+        href={externalLink ? externalLink : '#'}
+        target="_blank"
+        rel="noreferrer"
+      >
         <img src={imgPath} alt={imgAlt} />
         <h3>{name}</h3>
       </a>
