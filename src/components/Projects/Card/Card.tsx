@@ -14,13 +14,13 @@ const StyledCard = styled.div<ISCard>`
   box-shadow: 1px 1px 20px -5px rgba(0, 0, 0, 0.7);
   margin: 0.5rem;
   border-radius: 1%;
+  height: 100%;
   
   a {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     align-items: center;
-    min-height: 404px;
+    height: 100%;
   }
 
   img {
@@ -33,11 +33,16 @@ const StyledCard = styled.div<ISCard>`
   .projectName {
     font-weight: 600;
     font-size: 2rem;
+    padding: 1rem 0 0.5rem 0;
+    margin-bottom: 0.5rem;
+    border-bottom: solid 1px ${variables.colors.contrast};
   }
 
   .description {
-    line-height: 1.25rem;
-    padding: 0 1rem 1rem 1rem;
+    line-height: 1.5rem;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    text-align: justify;
+    margin: auto 0;
   }
 
   //${props => props.active ? `transform: scale(1.1);` : ''}
