@@ -4,7 +4,7 @@ import Image from "components/Image";
 
 const StyledSection = styled.section`
   display: flex;
-  align-items: start;
+  align-items: center;
   gap: 2rem;
   margin: auto;
   padding: 3.75rem 6.25rem;
@@ -31,7 +31,8 @@ const StyledSection = styled.section`
   
   p {
     font-weight: 500;
-    line-height: 1.1rem;
+    line-height: 1.5rem;
+    text-align: justify;
   }
 `
 
@@ -44,8 +45,8 @@ export function AboutMe() {
       />
       <div className="container">
         <h2 className="secTitle">Sobre mim</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque temporibus dignissimos ex et asperiores possimus facilis tempore natus, optio architecto velit ratione doloribus illum praesentium, quidem odio! Praesentium, pariatur veniam?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, autem. Officiis quae, doloremque dolorum modi odit ipsa tempore voluptatem repudiandae eveniet corporis rem animi voluptatibus deleniti veritatis et temporibus fugit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ipsum omnis quidem cumque magnam blanditiis ab iusto amet animi, ad delectus doloribus, corrupti fuga explicabo praesentium iure debitis voluptatibus perferendis!</p>
+        <p>Sou desenvolvedor apaixonado por tecnologia, lógica e desafios! Por causa da minha vontade de dar mais vida aos códigos que desenvolvia durante a graduação decidi me especializar em Front End, assim poderia desenvolver aplicações com um grau de contato mais direto com o usuário final. Desde então aprendi a utilizar diversas tecnlogias usadas no Front, sendo meu framework principal o React.js</p>
+        <p>Gosto de estar sempre aprendendo coisas novas e minha principal realização é ver as aplicações que desenvolvo sendo úteis para as pessoas em seu dia a dia.</p>
       </div>
     </StyledSection>
   );
