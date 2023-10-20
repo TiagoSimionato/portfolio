@@ -47,11 +47,11 @@ interface Props extends IProjectItem {
   cardWidth? : number,
 }
 
-export function Card({ name, description, imagePath, imgAlt, externalLink, cardWidth = 500 } : Props) {
+export function Card({ name, description, imgPath, imgAlt, externalLink, cardWidth = 500 } : Props) {
   return (
     <StyledCard cardWidth={cardWidth}>
       <a href={externalLink} target="_blank">
-        <img src={imagePath} alt={imgAlt} />
+        <img src={imgPath} alt={imgAlt} />
         <h2 className="projectName">{name}</h2>
         <p className="description">{description}</p>
       </a>

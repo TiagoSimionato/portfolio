@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import stacks from 'data/stacks.json';
+import stacks from 'data/stacks';
 import Stack from "./Stack";
 
 const StyledTechStack = styled.section`

@@ -1,7 +1,7 @@
 export default interface IProjectItem {
   name         : string,
   description  : string,
-  imagePath    : string,
+  imgPath    : string,
   imgAlt       : string,
   externalLink : string
 }

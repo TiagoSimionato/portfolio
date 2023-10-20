@@ -17,9 +17,7 @@ const StyledStack = styled.div`
   }
 `
 
-interface Props extends IStack {}
-
-export function Stack({name, imgPath, imgAlt, externalLink} : Props) {
+export function Stack({name, imgPath, imgAlt, externalLink} : IStack) {
   return (
     <StyledStack>
       <a href={externalLink ? externalLink : '#'} target="_blank">

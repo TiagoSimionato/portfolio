@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import variables from 'common/variables.json';
-import navigationHeader from "data/navigationHeader.json";
+import navHeaderData from "data/navigationHeader";
 import Navigation from "components/Navigation";
 
 const StyledHeader = styled.header`
@@ -24,7 +24,7 @@ export function Header() {
     <StyledHeader>
       <h1><a href="https://github.com/tiago-simionato" target="_blank">Tiago Henrique</a></h1>
       <Navigation
-        items={navigationHeader}
+        items={navHeaderData}
       />
     </StyledHeader>
   );

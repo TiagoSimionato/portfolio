@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import socials from 'data/socials.json';
+import socials from 'data/socials';
 
 const StyledSocials = styled.div`
   position: fixed;
@@ -29,6 +29,11 @@ const StyledSocials = styled.div`
     width: 1px;
   }
 `
+
+export interface ISocials {
+  externalLink : string,
+  className    : string
+}
 
 export function Socials() {
   return (

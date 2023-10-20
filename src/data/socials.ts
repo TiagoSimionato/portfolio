@@ -1,4 +1,6 @@
-[
+import { ISocials } from "components/Socials/Socials";
+
+const socials : ISocials[] = [
   {
     "externalLink" : "https://github.com/tiago-simionato",
     "className": "bx bxl-github"
@@ -8,3 +10,5 @@
     "className": "bx bxl-linkedin"
   }
 ]
+
+export default socials;

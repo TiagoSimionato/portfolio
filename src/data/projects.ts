@@ -1,4 +1,6 @@
-[
+import IProjectItem from "common/interfaces/IProjectItem";
+
+const projects : IProjectItem[] = [
   {
     "name": "Glypho",
     "description": "Glypho Compiler é um projeto de compilador para ser utilizado através da web. É um projeto FullStack que conta com uma interface FrontEnd que se conecta à API Rest do BackEnd para realizar a compilação do código escrito.",
@@ -11,8 +13,7 @@
     "description": "Esse é o Soft everywhere",
     "imgPath": "assets/images/sew.webp",
     "imgAlt": "Interface do Soft everywhere",
-    "externalLink": "https://frontend-test-tiago.vercel.app/",
-    "active": true
+    "externalLink": "https://frontend-test-tiago.vercel.app/"
   },
   {
     "name": "Alura Geek",
@@ -29,3 +30,5 @@
     "externalLink": "https://organo-tiago.vercel.app/"
   }
 ]
+
+export default projects;

@@ -1,4 +1,6 @@
-[
+import { IStack } from "common/interfaces/IStack";
+
+const stacks : IStack[] = [
   {
     "name": "JavaSript",
     "imgPath": "assets/images/js.webp",
@@ -48,3 +50,5 @@
     "externalLink": "https://tailwindcss.com/"
   }
 ]
+
+export default stacks;

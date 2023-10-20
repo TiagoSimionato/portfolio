@@ -1,4 +1,6 @@
-[
+import INavItem from "common/interfaces/INavItem";
+
+const navigationHeader : INavItem[] = [
   {
     "name": "Sobre Mim",
     "link": "#aboutme"
@@ -12,3 +14,5 @@
     "link": "#techs"
   }
 ]
+
+export default navigationHeader;

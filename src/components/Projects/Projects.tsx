@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';
-import projectsData from 'data/projects.json';
+import projectsData from 'data/projects';
 import Card from "./Card";
-import { useState } from 'react';
 import variables from 'common/variables.json';
 
 const StyledProjects = styled.section`
@@ -37,8 +36,6 @@ const StyledProjects = styled.section`
 `
 
 export function Projects() {
-  const [active, setActive] = useState<number>(0);
-
   return (
     <StyledProjects id="projects">
       <h2 className="secTitle">Projetos realizados</h2>
@@ -55,7 +52,7 @@ export function Projects() {
                 <Card
                   name={item.name}
                   description={item.description}
-                  imagePath={item.imgPath}
+                  imgPath={item.imgPath}
                   imgAlt={item.imgAlt}
                   externalLink={item.externalLink}
                 />
