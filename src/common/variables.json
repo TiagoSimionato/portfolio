@@ -4,6 +4,7 @@
     "secondary": "#662549",
     "tertiary": "#AE445A",
     "contrast": "#F39F5A",
+    "contrastSaturated": "#FF7B10",
     "primaryTransparent": "#451952F3"
   }
 }

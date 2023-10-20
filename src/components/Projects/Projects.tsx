@@ -22,6 +22,10 @@ const StyledProjects = styled.section`
     opacity: 1;
   }
 
+  .splide__arrow:hover {
+    background-color: ${variables.colors.contrastSaturated};
+  }
+
   .splide__arrow--prev {
     left: 0;
   }
