@@ -8,6 +8,7 @@
     "primaryTransparent": "#451952F3"
   },
   "breakpoints" : {
-    "tablet": "800px"
+    "tablet": "800px",
+    "phone": "500px"
   }
 }

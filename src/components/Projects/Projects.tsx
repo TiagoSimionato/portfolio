@@ -52,6 +52,24 @@ const StyledProjects = styled.section`
       visibility: visible;
     }
   }
+
+  @media screen and (max-width: ${variables.breakpoints.phone}) {
+    .splide {
+      padding: 3.5rem 0.5rem 2rem 0.5rem;
+    }
+
+    .splide__arrow--prev {
+      top: 0;
+      left: 35%;
+      transform: scale(1.5);
+    }
+
+    .splide__arrow--next {
+      top: 0;
+      right: 35%;
+      transform: scale(1.5);
+    }
+  }
 `
 
 export function Projects() {
@@ -60,13 +78,17 @@ export function Projects() {
   useEffect(() => {
     function handleCardWidth() {
       const newWidth = document.documentElement.clientWidth;
-      const Strbreakpoint = variables.breakpoints.tablet;
-      const bp = Number(Strbreakpoint.substring(0, Strbreakpoint.length - 2));
+      const tabletStrbreakpoint = variables.breakpoints.tablet;
+      const tabletBP = Number(tabletStrbreakpoint.substring(0, tabletStrbreakpoint.length - 2));
+      const phoneStrbreakpoint = variables.breakpoints.phone;
+      const phoneBP = Number(tabletStrbreakpoint.substring(0, phoneStrbreakpoint.length - 2));
 
-      if (newWidth > bp) {
+      if (newWidth > tabletBP) {
         setCardWidth(500);
-      } else {
+      } else if (newWidth > phoneBP) {
         setCardWidth(newWidth - 16*3*2 - 20);
+      } else {
+        setCardWidth(newWidth - 16*0.5*2 - 20);
       }
     }
 
