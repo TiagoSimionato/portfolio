@@ -10,3 +10,4 @@
 - Textos em inglês
 - Layout Mobile
 - Inserção de ***span*** nas descrições dos projetos?
+- Melhorar a acessibilidade
