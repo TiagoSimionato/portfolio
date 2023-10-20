@@ -8,6 +8,10 @@ const socials : ISocials[] = [
   {
     "externalLink" : "https://www.linkedin.com/in/tiago-henrique-simionato-machado/",
     "className": "bx bxl-linkedin"
+  },
+  {
+    "externalLink" : "https://www.behance.net/tiagosimionato",
+    "className": "bx bxl-behance"
   }
 ]
 
