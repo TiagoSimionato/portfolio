@@ -25,7 +25,6 @@ const StyledCard = styled.div<ISCard>`
 
   img {
     width: ${props => props.cardWidth}px;
-    height: 242px;
     border-radius: 1%;
     //${props => props.active ? `width: 500px; height: 400px;` : ''} TODO IMPROVE CAROUSEL STYLE
   }

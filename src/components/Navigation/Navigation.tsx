@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import INavItem from "common/interfaces/INavItem";
+import variables from "common/variables.json";
 
 const StyledNavigation = styled.nav`
   ul {
@@ -7,7 +8,19 @@ const StyledNavigation = styled.nav`
     gap: 15px;
 
     li {
-      font-size: 1.5rem;
+      a {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: ${variables.breakpoints.tablet}) {
+    ul {
+      li {
+        a {
+          font-size: 1rem;
+        }
+      }
     }
   }
 `

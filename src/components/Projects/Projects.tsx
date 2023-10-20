@@ -4,6 +4,7 @@ import '@splidejs/react-splide/css';
 import projectsData from 'data/projects';
 import Card from "./Card";
 import variables from 'common/variables.json';
+import { useEffect, useState } from "react";
 
 const StyledProjects = styled.section`
   padding: 3.75rem 6.25rem;
@@ -27,19 +28,52 @@ const StyledProjects = styled.section`
   }
 
   .splide__arrow--prev {
-    left: 0;
+    left: 11px;
   }
 
   .splide__arrow--next {
-    right: 0;
+    right: 11px;
   }
 
   .splide__pagination {
     visibility: hidden;
   }
+
+  @media screen and (max-width: ${variables.breakpoints.tablet}) {
+    padding: 3.75rem 0;
+
+    .splide {
+      padding: 0 3rem 2rem 3rem;
+    }
+
+    .splide__pagination {
+      position: absolute;
+      bottom: 0;
+      visibility: visible;
+    }
+  }
 `
 
 export function Projects() {
+  const [cardWidth, setCardWidth] = useState(500);
+
+  useEffect(() => {
+    function handleCardWidth() {
+      const newWidth = document.documentElement.clientWidth;
+      const Strbreakpoint = variables.breakpoints.tablet;
+      const bp = Number(Strbreakpoint.substring(0, Strbreakpoint.length - 2));
+
+      if (newWidth > bp) {
+        setCardWidth(500);
+      } else {
+        setCardWidth(newWidth - 16*3*2 - 20);
+      }
+    }
+
+    window.addEventListener('resize', handleCardWidth);
+    handleCardWidth();
+  }, []);
+
   return (
     <StyledProjects id="projects">
       <h2 className="secTitle">Projetos realizados</h2>
@@ -59,6 +93,7 @@ export function Projects() {
                   imgPath={item.imgPath}
                   imgAlt={item.imgAlt}
                   externalLink={item.externalLink}
+                  cardWidth={cardWidth}
                 />
               </SplideSlide>
             )}

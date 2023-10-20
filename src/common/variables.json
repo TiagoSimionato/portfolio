@@ -6,5 +6,8 @@
     "contrast": "#F39F5A",
     "contrastSaturated": "#FF7B10",
     "primaryTransparent": "#451952F3"
+  },
+  "breakpoints" : {
+    "tablet": "800px"
   }
 }

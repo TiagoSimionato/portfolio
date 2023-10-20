@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import socials from 'data/socials';
+import variables from "common/variables.json";
 
 const StyledSocials = styled.div`
   position: fixed;
@@ -23,10 +24,27 @@ const StyledSocials = styled.div`
     }
   }
 
-  .vLine {
+  .line {
     height: 80px;
     background-color: white;
     width: 1px;
+  }
+
+  @media screen and (max-width: ${variables.breakpoints.tablet}) {
+    position: static;
+    width: auto;
+    padding-top: 1.5rem;
+
+    ul {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .line {
+      height: 1px;
+      width: 80px;
+      display: block;
+    }
   }
 `
 
@@ -39,7 +57,7 @@ export function Socials() {
   return (
     <StyledSocials>
       <ul>
-        <div className="vLine"></div>
+        <div className="line"></div>
         {socials.map((item, index) => //TODO FIX INDEX
           <li key={index}>
             <a
@@ -50,7 +68,7 @@ export function Socials() {
             >{ }</a>
           </li>
         )}
-        <div className="vLine"></div>
+        <div className="line"> </div>
       </ul>
     </StyledSocials>
   );

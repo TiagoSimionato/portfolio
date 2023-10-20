@@ -63,9 +63,16 @@ a {
 a:hover {
 	color: ${variables.colors.contrast};
 }
+
 .secTitle {
 	color: ${variables.colors.contrast};
   font-size: 3rem;
   font-weight: 600;
+}
+
+@media screen and (max-width: ${variables.breakpoints.tablet}){
+	.secTitle {
+		font-size: 2.275rem;
+	}
 }
 `

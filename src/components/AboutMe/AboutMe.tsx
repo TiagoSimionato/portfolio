@@ -22,17 +22,20 @@ const StyledSection = styled.section`
     flex-direction: column;
     gap: 1.5rem;
   }
-
-  h2 {
-    color: ${variables.colors.contrast};
-    font-size: 3rem;
-    font-weight: 600;
-  }
   
   p {
     font-weight: 500;
     line-height: 1.5rem;
     text-align: justify;
+  }
+
+  @media screen and (max-width: ${variables.breakpoints.tablet}) {
+    flex-direction: column;
+    padding: 3.75rem 3rem;
+
+    .container {
+      order: 1;
+    }
   }
 `
 

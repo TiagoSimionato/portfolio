@@ -17,6 +17,14 @@ const StyledHeader = styled.header`
     color: white;
     font-size: 2rem;
   }
+
+  @media screen and (max-width: ${variables.breakpoints.tablet}) {
+    padding: 1.5rem 3rem;
+
+    h1 {
+      font-size: 1rem;
+    }
+  }
 `
 
 export function Header() {

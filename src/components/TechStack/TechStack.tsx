@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import stacks from 'data/stacks';
 import Stack from "./Stack";
+import variables from "common/variables.json";
 
 const StyledTechStack = styled.section`
   white-space: nowrap;
@@ -10,6 +11,7 @@ const StyledTechStack = styled.section`
 
   h2 {
     padding: 0 6.75rem 4rem 3rem;
+    white-space: normal;
   }
 
   .preWrapper {
@@ -38,6 +40,14 @@ const StyledTechStack = styled.section`
     }
     to {
       transform: translateX(-100%);
+    }
+  }
+
+  @media screen and (max-width: ${variables.breakpoints.tablet}) {
+    padding: 3.75rem 0;
+
+    .wrapper {
+      animation: stackSlide infinite 15s linear;
     }
   }
 `
