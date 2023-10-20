@@ -2,14 +2,13 @@ import IProjectItem from "common/interfaces/IProjectItem";
 import styled from "styled-components";
 import variables from 'common/variables.json';
 
-const cardWidth : number = 500;
-
 interface ISCard {
-  active? : boolean
+  active?  : boolean,
+  cardWidth : number,
 }
 
 const StyledCard = styled.div<ISCard>`
-  width: ${cardWidth}px;
+  width: ${props => props.cardWidth}px;
   background-color: ${variables.colors.primaryTransparent};
   box-shadow: 1px 1px 20px -5px rgba(0, 0, 0, 0.7);
   margin: 0.5rem;
@@ -24,7 +23,7 @@ const StyledCard = styled.div<ISCard>`
   }
 
   img {
-    width: ${cardWidth}px;
+    width: ${props => props.cardWidth}px;
     height: 242px;
     border-radius: 1%;
     //${props => props.active ? `width: 500px; height: 400px;` : ''} TODO IMPROVE CAROUSEL STYLE
@@ -44,12 +43,13 @@ const StyledCard = styled.div<ISCard>`
 `
 
 interface Props extends IProjectItem {
-  active? : boolean
+  active?   : boolean,
+  cardWidth? : number,
 }
 
-export function Card({ name, description, imagePath, imgAlt, externalLink } : Props) {
+export function Card({ name, description, imagePath, imgAlt, externalLink, cardWidth = 500 } : Props) {
   return (
-    <StyledCard>
+    <StyledCard cardWidth={cardWidth}>
       <a href={externalLink} target="_blank">
         <img src={imagePath} alt={imgAlt} />
         <h2 className="projectName">{name}</h2>
