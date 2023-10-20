@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import variables from "common/variables.json";
+import Image from "components/Image";
 
 const StyledSection = styled.section`
   display: flex;
@@ -37,7 +38,10 @@ const StyledSection = styled.section`
 export function AboutMe() {
   return (
     <StyledSection id="aboutme">
-      <img src="assets/images/tiago.jpg" alt="Autor da Página" />
+      <Image
+        src="assets/images/tiago.jpg"
+        alt="Autor da Página"
+      />
       <div className="container">
         <h2 className="secTitle">Sobre mim</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque temporibus dignissimos ex et asperiores possimus facilis tempore natus, optio architecto velit ratione doloribus illum praesentium, quidem odio! Praesentium, pariatur veniam?</p>

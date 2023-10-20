@@ -1,4 +1,5 @@
 import { IStack } from "common/interfaces/IStack";
+import Image from "components/Image";
 import styled from "styled-components";
 
 const StyledStack = styled.div`
@@ -25,7 +26,10 @@ export function Stack({name, imgPath, imgAlt, externalLink} : IStack) {
         target="_blank"
         rel="noreferrer"
       >
-        <img src={imgPath} alt={imgAlt} />
+        <Image
+          src={imgPath}
+          alt={imgAlt}
+        />
         <h3>{name}</h3>
       </a>
     </StyledStack>

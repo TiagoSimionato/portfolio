@@ -1,6 +1,7 @@
 import IProjectItem from "common/interfaces/IProjectItem";
 import styled from "styled-components";
 import variables from 'common/variables.json';
+import Image from "components/Image";
 
 interface ISCard {
   active?  : boolean,
@@ -55,7 +56,10 @@ export function Card({ name, description, imgPath, imgAlt, externalLink, cardWid
         target="_blank"
         rel="noreferrer"
       >
-        <img src={imgPath} alt={imgAlt} />
+        <Image
+          src={imgPath}
+          alt={imgAlt}
+        />
         <h2 className="projectName">{name}</h2>
         <p className="description">{description}</p>
       </a>
