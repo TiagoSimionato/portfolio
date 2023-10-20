@@ -3,6 +3,7 @@
     "primary": "#451952",
     "secondary": "#662549",
     "tertiary": "#AE445A",
+    "tertiaryLighter": "#E75B77",
     "contrast": "#F39F5A",
     "contrastSaturated": "#FF7B10",
     "primaryTransparent": "#451952F3"

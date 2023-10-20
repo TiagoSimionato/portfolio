@@ -70,6 +70,30 @@ a:hover {
   font-weight: 600;
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+ 
+::-webkit-scrollbar-track {
+	background: ${variables.colors.secondary};
+}
+ 
+::-webkit-scrollbar-thumb {
+	background: ${variables.colors.tertiary};
+	border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: ${variables.colors.tertiaryLighter};
+}
+
+@supports (scrollbar-color: red blue) {
+	* {
+		scrollbar-color: ${variables.colors.tertiary} ${variables.colors.secondary};
+		scrollbar-width: thin;
+	}
+}
+
 @media screen and (max-width: ${variables.breakpoints.tablet}){
 	.secTitle {
 		font-size: 2.275rem;
