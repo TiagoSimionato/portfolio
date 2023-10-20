@@ -48,6 +48,12 @@ const stacks : IStack[] = [
     "imgPath": "assets/images/tailwindcss.webp",
     "imgAlt": "logo tailwind css",
     "externalLink": "https://tailwindcss.com/"
+  },
+  {
+    "name": "Astro",
+    "imgPath": "assets/images/astro.png",
+    "imgAlt": "logo astro",
+    "externalLink": "https://astro.build/"
   }
 ]
 

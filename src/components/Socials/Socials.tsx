@@ -57,7 +57,7 @@ export function Socials() {
   return (
     <StyledSocials>
       <ul>
-        <div className="line"></div>
+        <div className="line" aria-hidden='true'></div>
         {socials.map((item, index) => //TODO FIX INDEX
           <li key={index}>
             <a
@@ -68,7 +68,7 @@ export function Socials() {
             >{ }</a>
           </li>
         )}
-        <div className="line"> </div>
+        <div className="line" aria-hidden='true'> </div>
       </ul>
     </StyledSocials>
   );
