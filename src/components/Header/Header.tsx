@@ -15,7 +15,7 @@ const StyledHeader = styled.header`
 
   h1 {
     color: white;
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   @media screen and (max-width: ${variables.breakpoints.tablet}) {

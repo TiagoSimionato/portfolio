@@ -81,7 +81,7 @@ export function Projects() {
       const tabletStrbreakpoint = variables.breakpoints.tablet;
       const tabletBP = Number(tabletStrbreakpoint.substring(0, tabletStrbreakpoint.length - 2));
       const phoneStrbreakpoint = variables.breakpoints.phone;
-      const phoneBP = Number(tabletStrbreakpoint.substring(0, phoneStrbreakpoint.length - 2));
+      const phoneBP = Number(phoneStrbreakpoint.substring(0, phoneStrbreakpoint.length - 2));
 
       if (newWidth > tabletBP) {
         setCardWidth(500);
@@ -90,6 +90,8 @@ export function Projects() {
       } else {
         setCardWidth(newWidth - 16*0.5*2 - 20);
       }
+      console.log(newWidth);
+      console.log(phoneBP);
     }
 
     window.addEventListener('resize', handleCardWidth);
