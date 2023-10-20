@@ -8,3 +8,4 @@
 - Light Mode
 - Animações para o carrosel
 - Textos em inglês
+- Layout Mobile
