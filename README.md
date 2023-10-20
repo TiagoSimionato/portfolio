@@ -9,3 +9,4 @@
 - Animações para o carrosel
 - Textos em inglês
 - Layout Mobile
+- Inserção de ***span*** nas descrições dos projetos?
