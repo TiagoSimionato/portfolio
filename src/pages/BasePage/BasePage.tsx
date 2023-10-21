@@ -11,6 +11,7 @@ const Background = styled.div`
   min-height: 100vh;
   background-image: linear-gradient(${variables.colors.primary}, ${variables.colors.secondary});
   position: relative;
+  overflow: hidden;
 
   display: flex;
   flex-direction: column;

@@ -10,7 +10,7 @@ const StyledTechStack = styled.section`
   position: relative;
 
   h2 {
-    padding: 0 6.75rem 4rem 3rem;
+    padding: 0 3rem 4rem 3rem;
     white-space: normal;
   }
 

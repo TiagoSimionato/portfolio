@@ -12,6 +12,7 @@ const StyledProjects = styled.section`
   .secTitle {
     margin-bottom: 3.75rem;
     padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .splide {
@@ -90,8 +91,6 @@ export function Projects() {
       } else {
         setCardWidth(newWidth - 16*0.5*2 - 20);
       }
-      console.log(newWidth);
-      console.log(phoneBP);
     }
 
     window.addEventListener('resize', handleCardWidth);

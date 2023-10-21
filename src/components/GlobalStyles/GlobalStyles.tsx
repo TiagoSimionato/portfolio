@@ -68,6 +68,7 @@ a:hover {
 	color: ${variables.colors.contrast};
   font-size: 3rem;
   font-weight: 600;
+	line-height: 2.75rem;
 }
 
 ::-webkit-scrollbar {
