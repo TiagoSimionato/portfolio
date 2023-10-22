@@ -37,6 +37,10 @@ const StyledSection = styled.section`
       order: 1;
     }
   }
+
+  @media screen and (max-width: ${variables.breakpoints.tablet}) {
+    padding: 3.75rem 1.5rem;
+  }
 `
 
 export function AboutMe() {

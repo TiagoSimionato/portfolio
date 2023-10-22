@@ -1,6 +1,7 @@
 import { IStack } from "common/interfaces/IStack";
 import Image from "components/Image";
 import styled from "styled-components";
+import variables from "common/variables.json";
 
 const StyledStack = styled.div`
   width: fit-content;
@@ -15,6 +16,22 @@ const StyledStack = styled.div`
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+  }
+
+  @media screen and (max-width: ${variables.breakpoints.tablet}) {
+    margin: 0;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  @media screen and (max-width: ${variables.breakpoints.phone}) {
+    img {
+      width: 80px;
+      height: 80px;
+    }
   }
 `
 

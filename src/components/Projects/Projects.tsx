@@ -55,6 +55,11 @@ const StyledProjects = styled.section`
   }
 
   @media screen and (max-width: ${variables.breakpoints.phone}) {
+    .secTitle {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
     .splide {
       padding: 3.5rem 0.5rem 2rem 0.5rem;
     }

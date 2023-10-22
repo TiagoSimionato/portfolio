@@ -44,37 +44,92 @@ const StyledTechStack = styled.section`
   }
 
   @media screen and (max-width: ${variables.breakpoints.tablet}) {
-    padding: 3.75rem 0;
+    padding: 3.75rem 1.5rem;
 
-    .wrapper {
-      animation: stackSlide infinite 15s linear;
+    .secTitle {
+      padding: 0 0 4rem 0;
+    }
+
+    .wrapper_0 {
+      animation: none;
+      box-sizing: border-box;
+      overflow: visible;
+      
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 1rem;
+        padding: 1rem 0;
+        /* overflow: hidden; */
+        position: relative;
+        justify-content: center;
+        align-items: center;
+
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          z-index: 2;
+        }
+
+        span {
+          position: absolute;
+          inset: 5px;
+          border-radius: 16px;
+          background-color: ${variables.colors.primary};
+          z-index: 1;
+        }
+      }
+
+      ul::after {
+        content: '';
+        position: absolute;
+        width: 140%;
+        left: -20%;
+        height: 50%;
+        background: linear-gradient(50deg, ${variables.colors.contrast}, ${variables.colors.contrast});
+        animation: borderAnimation 4s ease-in-out infinite alternate;
+        animation-delay: -2s;
+      }
+    }
+
+    .wrapper_1 {
+      display: none;
+    }
+  }
+
+  @keyframes borderAnimation {
+    0% {
+      transform: rotate(120deg);
+    }
+
+    100% {
+      transform: rotate(420deg);
     }
   }
 `
 
 export function TechStack() {
+
   return (
     <StyledTechStack id="techs">
       <h2 className="secTitle">Tecnologias conhecidas</h2>
       <div className="preWrapper">
-        <div className="wrapper">
-          <ul>
-            {stacks.map((stack, index) =>
-              <li key={index}>
-                <Stack {...stack} />
-              </li>
-            )}
-          </ul>
-        </div>
-        <div className="wrapper">
-          <ul>
-            {stacks.map((stack, index) =>
-              <li key={index}>
-                <Stack {...stack} />
-              </li>
-            )}
-          </ul>
-        </div>
+        {[1,2].map((item, index) => {
+          return (
+            <div className={`wrapper wrapper_${index}`}>
+              <ul>
+                {stacks.map((stack, index) =>
+                  <li key={index}>
+                    <Stack {...stack} />
+                  </li>
+                )}
+                <span></span>
+              </ul>
+            </div>
+          )
+        })}
       </div>
     </StyledTechStack>
   );
