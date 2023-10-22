@@ -39,7 +39,7 @@ const StyledNavigation = styled.nav<ISNavigation>`
     border: 2px solid black;
     background-color: ${variables.colors.secondary};
     box-shadow: 1px 1px 20px -5px rgba(0, 0, 0, 0.7);
-    transition: 0.5s ease-out;
+    transition: 0.25s ease-out;
 
     ul {
       flex-direction: column;
