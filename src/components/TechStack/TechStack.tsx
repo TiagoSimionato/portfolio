@@ -85,8 +85,8 @@ const StyledTechStack = styled.section`
       ul::after {
         content: '';
         position: absolute;
-        width: 140%;
-        left: -20%;
+        width: 200%;
+        left: -50%;
         height: 50%;
         background: linear-gradient(50deg, ${variables.colors.contrast}, ${variables.colors.contrast});
         animation: borderAnimation 4s ease-in-out infinite alternate;
