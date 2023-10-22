@@ -12,6 +12,7 @@ const Background = styled.div`
   background-image: linear-gradient(${variables.colors.primary}, ${variables.colors.secondary});
   position: relative;
   overflow-x: clip;
+  z-index: 0;
 
   display: flex;
   flex-direction: column;

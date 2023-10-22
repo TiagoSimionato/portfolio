@@ -53,24 +53,24 @@ const StyledTechStack = styled.section`
     .wrapper_0 {
       animation: none;
       box-sizing: border-box;
-      overflow: visible;
       
       ul {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         row-gap: 1rem;
         padding: 1rem 0;
-        /* overflow: hidden; */
+        overflow: hidden;
         position: relative;
         justify-content: center;
         align-items: center;
+        border-radius: 16px;
 
         li {
           display: flex;
           align-items: center;
           justify-content: center;
           position: relative;
-          z-index: 2;
+          z-index: 1;
         }
 
         span {
@@ -78,7 +78,7 @@ const StyledTechStack = styled.section`
           inset: 5px;
           border-radius: 16px;
           background-color: ${variables.colors.primary};
-          z-index: 1;
+          z-index: 0;
         }
       }
 
@@ -91,6 +91,7 @@ const StyledTechStack = styled.section`
         background: linear-gradient(50deg, ${variables.colors.contrast}, ${variables.colors.contrast});
         animation: borderAnimation 4s ease-in-out infinite alternate;
         animation-delay: -2s;
+        z-index: -1;
       }
     }
 

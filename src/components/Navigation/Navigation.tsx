@@ -40,6 +40,8 @@ const StyledNavigation = styled.nav<ISNavigation>`
     background-color: ${variables.colors.secondary};
     box-shadow: 1px 1px 20px -5px rgba(0, 0, 0, 0.7);
     transition: 0.25s ease-out;
+    border-radius: 5%;
+    z-index: 4;
 
     ul {
       flex-direction: column;
