@@ -44,6 +44,19 @@ const StyledCard = styled.div<ISCard>`
     margin: auto 0;
   }
 
+  @media screen and (max-width: ${variables.breakpoints.phone}) {
+    .projectName {
+      text-align: center;
+      padding: 0 0 0.5rem 0;
+      margin: 1rem 1rem 0.5rem 1rem;
+    }
+
+    .description {
+      line-height: 1.25rem;
+      padding: 0 1rem 1rem 1rem;
+    }
+  }
+
   //${props => props.active ? `transform: scale(1.1);` : ''}
 `
 
