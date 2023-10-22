@@ -117,7 +117,7 @@ export function TechStack() {
     <StyledTechStack id="techs">
       <h2 className="secTitle">Tecnologias conhecidas</h2>
       <div className="preWrapper">
-        {[1,2].map((item, index) => {
+        {[1,2].map((_, index) => {
           return (
             <div className={`wrapper wrapper_${index}`}>
               <ul>

@@ -7,6 +7,13 @@ const StyledStack = styled.div`
   width: fit-content;
   margin: 0 1rem;
 
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   img {
     width: 150px;
     height: 150px;
