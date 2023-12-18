@@ -2,7 +2,7 @@ import { ISocials } from "components/Socials/Socials";
 
 const socials : ISocials[] = [
   {
-    "externalLink" : "https://github.com/tiago-simionato",
+    "externalLink" : "https://github.com/TiagoSimionato",
     "className": "bx bxl-github"
   },
   {
