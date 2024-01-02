@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import stacks from 'data/stacks';
+import stacks from "data/stacks";
 import Stack from "./Stack";
 import variables from "common/variables.json";
 
@@ -50,16 +50,19 @@ const StyledTechStack = styled.section`
       padding: 0 0 4rem 0;
     }
 
+    .preWrapper {
+      border-radius: 16px;
+    }
+
     .wrapper_0 {
       animation: none;
       box-sizing: border-box;
-      
+
       ul {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(115px, 1fr));
         row-gap: 1rem;
         padding: 1rem 0;
-        overflow: hidden;
         position: relative;
         justify-content: center;
         align-items: center;
@@ -83,12 +86,16 @@ const StyledTechStack = styled.section`
       }
 
       ul::after {
-        content: '';
+        content: "";
         position: absolute;
-        width: 200%;
-        left: -50%;
+        width: 300vw;
+        left: -100vw;
         height: 50%;
-        background: linear-gradient(50deg, ${variables.colors.contrast}, ${variables.colors.contrast});
+        background: linear-gradient(
+          50deg,
+          ${variables.colors.contrast},
+          ${variables.colors.contrast}
+        );
         animation: borderAnimation 4s ease-in-out infinite alternate;
         animation-delay: -2s;
         z-index: -1;
@@ -109,27 +116,26 @@ const StyledTechStack = styled.section`
       transform: rotate(420deg);
     }
   }
-`
+`;
 
 export function TechStack() {
-
   return (
     <StyledTechStack id="techs">
       <h2 className="secTitle">Tecnologias conhecidas</h2>
       <div className="preWrapper">
-        {[1,2].map((_, index) => {
+        {[1, 2].map((_, index) => {
           return (
             <div className={`wrapper wrapper_${index}`}>
               <ul>
-                {stacks.map((stack, index) =>
+                {stacks.map((stack, index) => (
                   <li key={index}>
                     <Stack {...stack} />
                   </li>
-                )}
+                ))}
                 <span></span>
               </ul>
             </div>
-          )
+          );
         })}
       </div>
     </StyledTechStack>

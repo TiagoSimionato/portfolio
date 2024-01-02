@@ -117,7 +117,6 @@ export function Projects() {
             autoWidth: true,
             autoHeight: true,
             snap: true,
-            type: "loop",
           }}
           tag="div"
         >
