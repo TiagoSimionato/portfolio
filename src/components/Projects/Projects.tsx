@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import '@splidejs/react-splide/css';
-import projectsData from 'data/projects';
+import "@splidejs/react-splide/css";
+import projectsData from "data/projects";
 import Card from "./Card";
-import variables from 'common/variables.json';
+import variables from "common/variables.json";
 import { useEffect, useState } from "react";
 
 const StyledProjects = styled.section`
@@ -19,13 +19,15 @@ const StyledProjects = styled.section`
     padding: 0 3rem;
   }
 
-  .splide__arrow {
-    background-color: ${variables.colors.contrast};
-    opacity: 1;
-  }
-
   .splide__arrow:hover {
     background-color: ${variables.colors.contrastSaturated};
+  }
+
+  .splide__arrow,
+  .splide__arrow:focus,
+  .splide__arrow:active {
+    background-color: ${variables.colors.contrast};
+    opacity: 1;
   }
 
   .splide__arrow--prev {
@@ -76,7 +78,7 @@ const StyledProjects = styled.section`
       transform: scale(1.5);
     }
   }
-`
+`;
 
 export function Projects() {
   const [cardWidth, setCardWidth] = useState(500);
@@ -85,35 +87,45 @@ export function Projects() {
     function handleCardWidth() {
       const newWidth = document.documentElement.clientWidth;
       const tabletStrbreakpoint = variables.breakpoints.tablet;
-      const tabletBP = Number(tabletStrbreakpoint.substring(0, tabletStrbreakpoint.length - 2));
+      const tabletBP = Number(
+        tabletStrbreakpoint.substring(0, tabletStrbreakpoint.length - 2)
+      );
       const phoneStrbreakpoint = variables.breakpoints.phone;
-      const phoneBP = Number(phoneStrbreakpoint.substring(0, phoneStrbreakpoint.length - 2));
+      const phoneBP = Number(
+        phoneStrbreakpoint.substring(0, phoneStrbreakpoint.length - 2)
+      );
 
       if (newWidth > tabletBP) {
         setCardWidth(500);
       } else if (newWidth > phoneBP) {
-        setCardWidth(newWidth - 16*3*2 - 20);
+        setCardWidth(newWidth - 16 * 3 * 2 - 20);
       } else {
-        setCardWidth(newWidth - 16*0.5*2 - 20);
+        setCardWidth(newWidth - 16 * 0.5 * 2 - 20);
       }
     }
 
-    window.addEventListener('resize', handleCardWidth);
+    window.addEventListener("resize", handleCardWidth);
     handleCardWidth();
   }, []);
 
   return (
     <StyledProjects id="projects">
       <h2 className="secTitle">Projetos realizados</h2>
-        <div className="wrapper">
-          <Splide options={ {
+      <div className="wrapper">
+        <Splide
+          options={{
             autoWidth: true,
             autoHeight: true,
-            snap: true
+            snap: true,
+            type: "loop",
           }}
-            tag="div"
-          >
-            {projectsData.map((item, index) => //TODO FIX INDEX
+          tag="div"
+        >
+          {projectsData.map(
+            (
+              item,
+              index //TODO FIX INDEX
+            ) => (
               <SplideSlide key={index}>
                 <Card
                   name={item.name}
@@ -124,10 +136,11 @@ export function Projects() {
                   cardWidth={cardWidth}
                 />
               </SplideSlide>
-            )}
-          </Splide>
-        </div>
-          {/*active={index === active ? true : false}*/}
+            )
+          )}
+        </Splide>
+      </div>
+      {/*active={index === active ? true : false}*/}
     </StyledProjects>
   );
 }

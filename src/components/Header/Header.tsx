@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import variables from 'common/variables.json';
+import variables from "common/variables.json";
 import navHeaderData from "data/navigationHeader";
 import Navigation from "components/Navigation";
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const StyledHeader = styled.header`
   display: flex;
@@ -47,19 +47,28 @@ const StyledHeader = styled.header`
       display: block;
     }
   }
-`
+`;
 
 export function Header() {
-  const phoneLayoutWidth =  Number(variables.breakpoints.phone.substring(0, variables.breakpoints.phone.length - 2));
-  const [isPhoneLayout, setIsPhoneLayout] = useState(document.documentElement.clientWidth <= phoneLayoutWidth);
+  const phoneLayoutWidth = Number(
+    variables.breakpoints.phone.substring(
+      0,
+      variables.breakpoints.phone.length - 2
+    )
+  );
+  const [isPhoneLayout, setIsPhoneLayout] = useState(
+    document.documentElement.clientWidth <= phoneLayoutWidth
+  );
 
   const [isNavActive, setNavActive] = useState(isPhoneLayout ? false : true);
 
   useEffect(() => {
-    window.addEventListener('resize', () => {
-      setIsPhoneLayout(document.documentElement.clientWidth <= phoneLayoutWidth);
+    window.addEventListener("resize", () => {
+      setIsPhoneLayout(
+        document.documentElement.clientWidth <= phoneLayoutWidth
+      );
     });
-  }, [document.documentElement.clientWidth]);
+  }, [phoneLayoutWidth]);
 
   useEffect(() => {
     setNavActive(isPhoneLayout ? false : true);
@@ -69,7 +78,7 @@ export function Header() {
     <StyledHeader>
       <h1>
         <a
-          href="https://github.com/tiago-simionato"
+          href="https://github.com/tiagosimionato"
           target="_blank"
           rel="noreferrer"
         >
@@ -78,12 +87,9 @@ export function Header() {
       </h1>
       <button
         className="bx bxs-grid"
-        onClick={() => isNavActive ? setNavActive(false) : setNavActive(true) }
+        onClick={() => (isNavActive ? setNavActive(false) : setNavActive(true))}
       ></button>
-      <Navigation
-        items={navHeaderData}
-        active={isNavActive}
-      />
+      <Navigation items={navHeaderData} active={isNavActive} />
     </StyledHeader>
   );
 }
