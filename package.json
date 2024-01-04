@@ -13,6 +13,7 @@
     "@types/react-dom": "^18.2.12",
     "@types/react-router-dom": "^5.3.3",
     "imagemin": "^8.0.1",
+    "imagemin-gif2webp": "^3.0.0",
     "imagemin-webp": "^8.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
