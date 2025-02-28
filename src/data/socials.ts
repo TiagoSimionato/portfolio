@@ -9,10 +9,6 @@ const socials: ISocials[] = [
     className: 'bx bxl-linkedin',
     externalLink: 'https://www.linkedin.com/in/tiago-henrique-simionato-machado/',
   },
-  {
-    className: 'bx bxl-behance',
-    externalLink: 'https://www.behance.net/tiagosimionato',
-  },
 ];
 
 export default socials;
