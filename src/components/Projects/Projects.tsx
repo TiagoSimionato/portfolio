@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
-import projectsData from "data/projects";
-import Card from "./Card";
-import variables from "common/variables.json";
-import { useEffect, useState } from "react";
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css';
+import variables from 'common/variables.json';
+import projectsData from 'data/projects';
+import { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import Card from './Card';
 
 const StyledProjects = styled.section`
   padding: 3.75rem 6.25rem;
@@ -104,7 +104,7 @@ export function Projects() {
       }
     }
 
-    window.addEventListener("resize", handleCardWidth);
+    window.addEventListener('resize', handleCardWidth);
     handleCardWidth();
   }, []);
 
