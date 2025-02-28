@@ -1,3 +1,7 @@
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800', '900'] });
+
 export default function RootLayout({
   children,
 }: {
@@ -29,13 +33,9 @@ export default function RootLayout({
         <meta property="og:site_name" content="Portfolio de Tiago Simionato" />
 
         <link rel="manifest" href=" manifest.json" />
-        <title>Portfolio | Tiago Simionato</title>
-
-        <style>
-          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
-        </style>
+        <title>Portfolio Tiago Simionato</title>
       </head>
-      <body>{children}</body>
+      <body className={poppins.className}>{children}</body>
     </html>
   );
 }
