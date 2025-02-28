@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import INavItem from "common/interfaces/INavItem";
-import variables from "common/variables.json";
+import type INavItem from 'common/interfaces/INavItem';
+import variables from 'common/variables.json';
+import styled from 'styled-components';
 
 interface ISNavigation {
   active: boolean;
@@ -69,19 +69,16 @@ interface Props {
   active: boolean;
 }
 
-export function Navigation({ items, active }: Props) {
+export function Navigation({ active, items }: Props) {
   return (
-    <StyledNavigation active={active} className={active ? "" : "inactive"}>
+    <StyledNavigation active={active} className={active ? '' : 'inactive'}>
       <ul>
         {items.map(
-          (
-            item,
-            index //TODO FIX INDEX
-          ) => (
-            <li key={index}>
+          item => (
+            <li key={item.name}>
               <a href={item.link}>{item.name}</a>
             </li>
-          )
+          ),
         )}
       </ul>
     </StyledNavigation>

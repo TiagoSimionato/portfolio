@@ -8,7 +8,7 @@
     "contrastSaturated": "#FF7B10",
     "primaryTransparent": "#451952F3"
   },
-  "breakpoints" : {
+  "breakpoints": {
     "tablet": "800px",
     "phone": "500px"
   }

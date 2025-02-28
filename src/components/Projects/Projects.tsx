@@ -1,10 +1,10 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css';
 import variables from 'common/variables.json';
 import projectsData from 'data/projects';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Card from './Card';
+import '@splidejs/react-splide/css';
 
 const StyledProjects = styled.section`
   padding: 3.75rem 6.25rem;
@@ -88,24 +88,28 @@ export function Projects() {
       const newWidth = document.documentElement.clientWidth;
       const tabletStrbreakpoint = variables.breakpoints.tablet;
       const tabletBP = Number(
-        tabletStrbreakpoint.substring(0, tabletStrbreakpoint.length - 2)
+        tabletStrbreakpoint.substring(0, tabletStrbreakpoint.length - 2),
       );
       const phoneStrbreakpoint = variables.breakpoints.phone;
       const phoneBP = Number(
-        phoneStrbreakpoint.substring(0, phoneStrbreakpoint.length - 2)
+        phoneStrbreakpoint.substring(0, phoneStrbreakpoint.length - 2),
       );
 
       if (newWidth > tabletBP) {
         setCardWidth(500);
-      } else if (newWidth > phoneBP) {
+      }
+      else if (newWidth > phoneBP) {
         setCardWidth(newWidth - 16 * 3 * 2 - 20);
-      } else {
+      }
+      else {
         setCardWidth(newWidth - 16 * 0.5 * 2 - 20);
       }
     }
 
     window.addEventListener('resize', handleCardWidth);
     handleCardWidth();
+
+    return () => window.removeEventListener('resize', handleCardWidth);
   }, []);
 
   return (
@@ -114,32 +118,27 @@ export function Projects() {
       <div className="wrapper">
         <Splide
           options={{
-            autoWidth: true,
             autoHeight: true,
+            autoWidth: true,
             snap: true,
           }}
           tag="div"
         >
-          {projectsData.map(
-            (
-              item,
-              index //TODO FIX INDEX
-            ) => (
-              <SplideSlide key={index}>
-                <Card
-                  name={item.name}
-                  description={item.description}
-                  imgPath={item.imgPath}
-                  imgAlt={item.imgAlt}
-                  externalLink={item.externalLink}
-                  cardWidth={cardWidth}
-                />
-              </SplideSlide>
-            )
-          )}
+          {projectsData.map(item => (
+            <SplideSlide key={item.name}>
+              <Card
+                name={item.name}
+                description={item.description}
+                imgPath={item.imgPath}
+                imgAlt={item.imgAlt}
+                externalLink={item.externalLink}
+                cardWidth={cardWidth}
+              />
+            </SplideSlide>
+          ))}
         </Splide>
       </div>
-      {/*active={index === active ? true : false}*/}
+      {/* active={index === active ? true : false} */}
     </StyledProjects>
   );
 }

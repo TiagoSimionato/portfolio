@@ -1,3 +1,3 @@
-import { TechStack } from "./TechStack";
+import { TechStack } from './TechStack';
 
 export default TechStack;

@@ -1,9 +1,9 @@
+import type { PropsWithChildren } from 'react';
 import variables from 'common/variables.json';
 import Footer from 'components/Footer';
 import GlobalStyles from 'components/GlobalStyles';
 import Header from 'components/Header';
 import Socials from 'components/Socials';
-import { PropsWithChildren } from 'react';
 import styled from 'styled-components';
 
 const Background = styled.div`

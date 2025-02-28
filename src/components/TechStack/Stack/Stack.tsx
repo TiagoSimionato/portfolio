@@ -1,7 +1,7 @@
-import { IStack } from "common/interfaces/IStack";
-import Image from "components/Image";
-import styled from "styled-components";
-import variables from "common/variables.json";
+import type { IStack } from 'common/interfaces/IStack';
+import variables from 'common/variables.json';
+import Image from 'components/Image';
+import styled from 'styled-components';
 
 const StyledStack = styled.div`
   width: fit-content;
@@ -40,13 +40,13 @@ const StyledStack = styled.div`
       height: 80px;
     }
   }
-`
+`;
 
-export function Stack({name, imgPath, imgAlt, externalLink} : IStack) {
+export function Stack({ externalLink, imgAlt, imgPath, name }: IStack) {
   return (
     <StyledStack>
       <a
-        href={externalLink ? externalLink : '#'}
+        href={externalLink || '#'}
         target="_blank"
         rel="noreferrer"
       >

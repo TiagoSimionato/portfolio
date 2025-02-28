@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import variables from "common/variables.json";
-import Image from "components/Image";
+import variables from 'common/variables.json';
+import Image from 'components/Image';
+import styled from 'styled-components';
 
 const StyledSection = styled.section`
   display: flex;
@@ -41,7 +41,7 @@ const StyledSection = styled.section`
   @media screen and (max-width: ${variables.breakpoints.tablet}) {
     padding: 3.75rem 1.5rem;
   }
-`
+`;
 
 export function AboutMe() {
   return (

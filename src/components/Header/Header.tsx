@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import variables from "common/variables.json";
-import navHeaderData from "data/navigationHeader";
-import Navigation from "components/Navigation";
-import { useEffect, useState } from "react";
+import variables from 'common/variables.json';
+import Navigation from 'components/Navigation';
+import navHeaderData from 'data/navigationHeader';
+import { useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 const StyledHeader = styled.header`
   display: flex;
@@ -53,25 +53,28 @@ export function Header() {
   const phoneLayoutWidth = Number(
     variables.breakpoints.phone.substring(
       0,
-      variables.breakpoints.phone.length - 2
-    )
+      variables.breakpoints.phone.length - 2,
+    ),
   );
   const [isPhoneLayout, setIsPhoneLayout] = useState(
-    document.documentElement.clientWidth <= phoneLayoutWidth
+    document.documentElement.clientWidth <= phoneLayoutWidth,
   );
 
-  const [isNavActive, setNavActive] = useState(isPhoneLayout ? false : true);
+  const [isNavActive, setNavActive] = useState(!isPhoneLayout);
 
   useEffect(() => {
-    window.addEventListener("resize", () => {
+    const isPhoneLayout = () => {
       setIsPhoneLayout(
-        document.documentElement.clientWidth <= phoneLayoutWidth
+        document.documentElement.clientWidth <= phoneLayoutWidth,
       );
-    });
+    };
+    window.addEventListener('resize', isPhoneLayout);
+
+    return () => window.removeEventListener('resize', isPhoneLayout);
   }, [phoneLayoutWidth]);
 
   useEffect(() => {
-    setNavActive(isPhoneLayout ? false : true);
+    setNavActive(!isPhoneLayout);
   }, [isPhoneLayout]);
 
   return (
@@ -88,7 +91,9 @@ export function Header() {
       <button
         className="bx bxs-grid"
         onClick={() => (isNavActive ? setNavActive(false) : setNavActive(true))}
-      ></button>
+        type="button"
+      >
+      </button>
       <Navigation items={navHeaderData} active={isNavActive} />
     </StyledHeader>
   );

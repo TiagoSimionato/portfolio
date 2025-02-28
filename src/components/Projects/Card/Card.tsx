@@ -1,7 +1,7 @@
-import IProjectItem from "common/interfaces/IProjectItem";
-import styled from "styled-components";
-import variables from "common/variables.json";
-import Image from "components/Image";
+import type IProjectItem from 'common/interfaces/IProjectItem';
+import variables from 'common/variables.json';
+import Image from 'components/Image';
+import styled from 'styled-components';
 
 interface ISCard {
   active?: boolean;
@@ -9,7 +9,7 @@ interface ISCard {
 }
 
 const StyledCard = styled.div<ISCard>`
-  width: ${(props) => props.cardWidth}px;
+  width: ${props => props.cardWidth}px;
   background-color: ${variables.colors.primaryTransparent};
   box-shadow: 1px 1px 20px -5px rgba(0, 0, 0, 0.7);
   margin: 0.5rem;
@@ -24,12 +24,12 @@ const StyledCard = styled.div<ISCard>`
   }
 
   img {
-    width: ${(props) => props.cardWidth}px;
+    width: ${props => props.cardWidth}px;
     border-radius: 1%;
-    /*${(props) =>
+    /*${props =>
       props.active
         ? `width: 500px; height: 400px;`
-        : ""} TODO IMPROVE CAROUSEL STYLE*/
+        : ''} TODO IMPROVE CAROUSEL STYLE*/
   }
 
   .projectName {
@@ -65,7 +65,7 @@ const StyledCard = styled.div<ISCard>`
     }
   }
 
-  //${(props) => (props.active ? `transform: scale(1.1);` : "")}
+  //${props => (props.active ? `transform: scale(1.1);` : '')}
 `;
 
 interface Props extends IProjectItem {
@@ -74,12 +74,12 @@ interface Props extends IProjectItem {
 }
 
 export function Card({
-  name,
-  description,
-  imgPath,
-  imgAlt,
-  externalLink,
   cardWidth = 500,
+  description,
+  externalLink,
+  imgAlt,
+  imgPath,
+  name,
 }: Props) {
   return (
     <StyledCard cardWidth={cardWidth}>

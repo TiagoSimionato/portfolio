@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import variables from 'common/variables.json';
 import socials from 'data/socials';
-import variables from "common/variables.json";
+import styled from 'styled-components';
 
 const StyledSocials = styled.div`
   position: fixed;
@@ -46,29 +46,33 @@ const StyledSocials = styled.div`
       display: block;
     }
   }
-`
+`;
 
 export interface ISocials {
-  externalLink : string,
-  className    : string
+  externalLink: string;
+  className: string;
 }
 
 export function Socials() {
   return (
     <StyledSocials>
       <ul>
-        <div className="line" aria-hidden='true'></div>
-        {socials.map((item, index) => //TODO FIX INDEX
-          <li key={index}>
+        <div className="line" aria-hidden="true"></div>
+        {socials.map(item => (
+          <li key={item.className}>
             <a
               href={item.externalLink}
               className={item.className}
               target="_blank"
               rel="noreferrer"
-            >{ }</a>
+            >
+              { }
+            </a>
           </li>
-        )}
-        <div className="line" aria-hidden='true'> </div>
+        ))}
+        <div className="line" aria-hidden="true">
+          {' '}
+        </div>
       </ul>
     </StyledSocials>
   );

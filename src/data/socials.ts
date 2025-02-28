@@ -1,18 +1,18 @@
-import { ISocials } from "components/Socials/Socials";
+import type { ISocials } from 'components/Socials/Socials';
 
-const socials : ISocials[] = [
+const socials: ISocials[] = [
   {
-    "externalLink" : "https://github.com/TiagoSimionato",
-    "className": "bx bxl-github"
+    className: 'bx bxl-github',
+    externalLink: 'https://github.com/TiagoSimionato',
   },
   {
-    "externalLink" : "https://www.linkedin.com/in/tiago-henrique-simionato-machado/",
-    "className": "bx bxl-linkedin"
+    className: 'bx bxl-linkedin',
+    externalLink: 'https://www.linkedin.com/in/tiago-henrique-simionato-machado/',
   },
   {
-    "externalLink" : "https://www.behance.net/tiagosimionato",
-    "className": "bx bxl-behance"
-  }
-]
+    className: 'bx bxl-behance',
+    externalLink: 'https://www.behance.net/tiagosimionato',
+  },
+];
 
 export default socials;

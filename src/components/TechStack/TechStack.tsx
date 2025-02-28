@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import stacks from "data/stacks";
-import Stack from "./Stack";
-import variables from "common/variables.json";
+import variables from 'common/variables.json';
+import stacks from 'data/stacks';
+import styled from 'styled-components';
+import Stack from './Stack';
 
 const StyledTechStack = styled.section`
   white-space: nowrap;
@@ -86,7 +86,7 @@ const StyledTechStack = styled.section`
       }
 
       ul::after {
-        content: "";
+        content: '';
         position: absolute;
         width: 300vw;
         left: -100vw;
@@ -125,10 +125,10 @@ export function TechStack() {
       <div className="preWrapper">
         {[1, 2].map((_, index) => {
           return (
-            <div className={`wrapper wrapper_${index}`}>
+            <div key={_} className={`wrapper wrapper_${index}`}>
               <ul>
-                {stacks.map((stack, index) => (
-                  <li key={index}>
+                {stacks.map(stack => (
+                  <li key={stack.name}>
                     <Stack {...stack} />
                   </li>
                 ))}

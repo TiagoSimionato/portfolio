@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
   width: 100%;
@@ -11,7 +11,11 @@ const StyledFooter = styled.footer`
 export function Footer() {
   return (
     <StyledFooter>
-      &copy; {new Date().getFullYear()} | Tiago Henrique Simionato Machado
+      &copy;
+      {' '}
+      {new Date().getFullYear()}
+      {' '}
+      | Tiago Henrique Simionato Machado
     </StyledFooter>
   );
 }

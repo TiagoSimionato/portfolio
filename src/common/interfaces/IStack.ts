@@ -1,8 +1,8 @@
-import Formats from "common/types/ImageFormats";
+import type Formats from 'common/types/ImageFormats';
 
 export interface IStack {
-  name          : string,
-  imgPath       : `${string}.${Formats}`,
-  imgAlt        : string,
-  externalLink? : string,
+  name: string;
+  imgPath: `${string}.${Formats}`;
+  imgAlt: string;
+  externalLink?: string;
 }
