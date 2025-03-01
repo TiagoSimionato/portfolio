@@ -6,7 +6,7 @@ const StyledSocials = styled.div`
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 6.25rem;
+  width: 4rem;
 
   ul {
     display: flex;

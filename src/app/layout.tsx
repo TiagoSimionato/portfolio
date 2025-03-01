@@ -1,6 +1,7 @@
 import { Poppins } from 'next/font/google';
+import { Providers } from 'providers';
 
-const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800', '900'] });
+export const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800', '900'] });
 
 export default function RootLayout({
   children,
@@ -35,7 +36,11 @@ export default function RootLayout({
         <link rel="manifest" href=" manifest.json" />
         <title>Portfolio Tiago Simionato</title>
       </head>
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className} style={{ display: 'flex', flexDirection: 'column' }}>
+        <Providers>
+          {children}
+        </Providers>
+      </body>
     </html>
   );
 }

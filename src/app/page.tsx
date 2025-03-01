@@ -1,16 +1,14 @@
 'use client';
 
-import AboutMe from 'components/AboutMe';
-import Projects from 'components/Projects';
-import TechStack from 'components/TechStack';
+import { tabs } from 'components/Header/constants';
 import BasePage from 'pages/BasePage';
+import { useTabStore } from 'stores/tab';
 
 export default function HomePage() {
+  const { tab } = useTabStore();
   return (
     <BasePage>
-      <AboutMe />
-      <Projects />
-      <TechStack />
+      {tabs[tab].content}
     </BasePage>
   );
 }
