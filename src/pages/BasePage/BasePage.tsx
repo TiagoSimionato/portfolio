@@ -19,17 +19,15 @@ const Background = (
   />
 );
 
-export function BasePage({ children }: PropsWithChildren) {
-  return (
-    <>
-      <GlobalStyles />
-      {Background}
-      <Header />
-      <Stack paddingX="4rem" flexGrow={1} justifyContent="end" height="100%">
-        {children}
-        <Socials />
-        <Footer />
-      </Stack>
-    </>
-  );
-}
+export const BasePage = ({ children }: PropsWithChildren) => (
+  <>
+    <GlobalStyles />
+    {Background}
+    <Header />
+    <Stack paddingX="4rem" flexGrow={1} justifyContent="end" height="100%">
+      {children}
+      <Socials />
+      <Footer />
+    </Stack>
+  </>
+);

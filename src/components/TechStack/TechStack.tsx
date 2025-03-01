@@ -118,26 +118,22 @@ const StyledTechStack = styled.section`
   }
 `;
 
-export function TechStack() {
-  return (
-    <StyledTechStack id="techs">
-      <h2 className="secTitle">Tecnologias conhecidas</h2>
-      <div className="preWrapper">
-        {[1, 2].map((_, index) => {
-          return (
-            <div key={_} className={`wrapper wrapper_${index}`}>
-              <ul>
-                {stacks.map(stack => (
-                  <li key={stack.name}>
-                    <Stack {...stack} />
-                  </li>
-                ))}
-                <span></span>
-              </ul>
-            </div>
-          );
-        })}
-      </div>
-    </StyledTechStack>
-  );
-}
+export const TechStack = () => (
+  <StyledTechStack id="techs">
+    <h2 className="secTitle">Tecnologias conhecidas</h2>
+    <div className="preWrapper">
+      {[1, 2].map((_, index) => (
+        <div key={_} className={`wrapper wrapper_${index}`}>
+          <ul>
+            {stacks.map(stack => (
+              <li key={stack.name}>
+                <Stack {...stack} />
+              </li>
+            ))}
+            <span></span>
+          </ul>
+        </div>
+      ))}
+    </div>
+  </StyledTechStack>
+);

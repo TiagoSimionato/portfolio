@@ -5,7 +5,7 @@ import { useTabStore } from 'stores/tab';
 import { useToggle } from 'usehooks-ts';
 import { tabs } from './constants';
 
-export function Header() {
+export const Header = () => {
   const smallScreen = useMediaQuery('(max-width:800px)');
   const [_, toggleDrawer, setDrawer] = useToggle(false);
   const { setTabStore, tab } = useTabStore();
@@ -40,4 +40,4 @@ export function Header() {
       </Tabs>
     </Stack>
   );
-}
+};

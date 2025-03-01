@@ -1,4 +1,5 @@
-export default interface INavItem {
-  name: string;
+type INavItem = {
   link: string;
-}
+  name: string;
+};
+export default INavItem;

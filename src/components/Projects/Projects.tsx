@@ -80,11 +80,11 @@ const StyledProjects = styled.section`
   }
 `;
 
-export function Projects() {
+export const Projects = () => {
   const [cardWidth, setCardWidth] = useState(500);
 
   useEffect(() => {
-    function handleCardWidth() {
+    const handleCardWidth = () => {
       const newWidth = document.documentElement.clientWidth;
       const tabletStrbreakpoint = variables.breakpoints.tablet;
       const tabletBP = Number(
@@ -104,7 +104,7 @@ export function Projects() {
       else {
         setCardWidth(newWidth - 16 * 0.5 * 2 - 20);
       }
-    }
+    };
 
     window.addEventListener('resize', handleCardWidth);
     handleCardWidth();
@@ -141,4 +141,4 @@ export function Projects() {
       {/* active={index === active ? true : false} */}
     </StyledProjects>
   );
-}
+};

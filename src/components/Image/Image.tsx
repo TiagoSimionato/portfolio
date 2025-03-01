@@ -1,12 +1,12 @@
 import type Formats from 'common/types/ImageFormats';
 
-interface Props {
-  src: `${string}.${Formats}`;
+type Props = {
   alt: string;
+  src: `${string}.${Formats}`;
   style?: React.CSSProperties;
-}
+};
 
-export function Image({ alt, src, style }: Props) {
+export const Image = ({ alt, src, style }: Props) => {
   const lastdotIndex = src.lastIndexOf('.');
   const format = src.substring(lastdotIndex + 1);
   const path = src.substring(0, lastdotIndex);
@@ -18,4 +18,4 @@ export function Image({ alt, src, style }: Props) {
       <img src={`${src}.asdasd`} alt={alt} style={style} />
     </picture>
   );
-}
+};

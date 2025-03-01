@@ -3,10 +3,10 @@ import variables from 'common/variables.json';
 import Image from 'components/Image';
 import styled from 'styled-components';
 
-interface ISCard {
+type ISCard = {
   active?: boolean;
   cardWidth: number;
-}
+};
 
 const StyledCard = styled.div<ISCard>`
   width: ${props => props.cardWidth}px;
@@ -68,26 +68,24 @@ const StyledCard = styled.div<ISCard>`
   //${props => (props.active ? `transform: scale(1.1);` : '')}
 `;
 
-interface Props extends IProjectItem {
+type Props = {
   active?: boolean;
   cardWidth?: number;
-}
+} & IProjectItem;
 
-export function Card({
+export const Card = ({
   cardWidth = 500,
   description,
   externalLink,
   imgAlt,
   imgPath,
   name,
-}: Props) {
-  return (
-    <StyledCard cardWidth={cardWidth}>
-      <a href={externalLink} target="_blank" rel="noreferrer">
-        <Image src={imgPath} alt={imgAlt} />
-        <h2 className="projectName">{name}</h2>
-        <p className="description">{description}</p>
-      </a>
-    </StyledCard>
-  );
-}
+}: Props) => (
+  <StyledCard cardWidth={cardWidth}>
+    <a href={externalLink} target="_blank" rel="noreferrer">
+      <Image src={imgPath} alt={imgAlt} />
+      <h2 className="projectName">{name}</h2>
+      <p className="description">{description}</p>
+    </a>
+  </StyledCard>
+);

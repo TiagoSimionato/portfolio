@@ -1,9 +1,10 @@
 import type Formats from 'common/types/ImageFormats';
 
-export default interface IProjectItem {
-  name: string;
+type IProjectItem = {
   description: string;
-  imgPath: `${string}.${Formats}`;
-  imgAlt: string;
   externalLink: string;
-}
+  imgAlt: string;
+  imgPath: `${string}.${Formats}`;
+  name: string;
+};
+export default IProjectItem;

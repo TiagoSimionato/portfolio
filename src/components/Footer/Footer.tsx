@@ -8,14 +8,12 @@ const StyledFooter = styled.footer`
   box-sizing: border-box;
 `;
 
-export function Footer() {
-  return (
-    <StyledFooter>
-      &copy;
-      {' '}
-      {new Date().getFullYear()}
-      {' '}
-      | Tiago Henrique Simionato Machado
-    </StyledFooter>
-  );
-}
+export const Footer = () => (
+  <StyledFooter>
+    &copy;
+    {' '}
+    {new Date().getFullYear()}
+    {' '}
+    | Tiago Henrique Simionato Machado
+  </StyledFooter>
+);

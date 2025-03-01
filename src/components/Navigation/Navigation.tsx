@@ -2,9 +2,9 @@ import type INavItem from 'common/interfaces/INavItem';
 import variables from 'common/variables.json';
 import styled from 'styled-components';
 
-interface ISNavigation {
+type ISNavigation = {
   active: boolean;
-}
+};
 
 const StyledNavigation = styled.nav<ISNavigation>`
   ul {
@@ -64,23 +64,22 @@ const StyledNavigation = styled.nav<ISNavigation>`
     }
   }
 `;
-interface Props {
-  items: INavItem[];
-  active: boolean;
-}
 
-export function Navigation({ active, items }: Props) {
-  return (
-    <StyledNavigation active={active} className={active ? '' : 'inactive'}>
-      <ul>
-        {items.map(
-          item => (
-            <li key={item.name}>
-              <a href={item.link}>{item.name}</a>
-            </li>
-          ),
-        )}
-      </ul>
-    </StyledNavigation>
-  );
-}
+type Props = {
+  active: boolean;
+  items: INavItem[];
+};
+
+export const Navigation = ({ active, items }: Props) => (
+  <StyledNavigation active={active} className={active ? '' : 'inactive'}>
+    <ul>
+      {items.map(
+        item => (
+          <li key={item.name}>
+            <a href={item.link}>{item.name}</a>
+          </li>
+        ),
+      )}
+    </ul>
+  </StyledNavigation>
+);

@@ -48,32 +48,30 @@ const StyledSocials = styled.div`
   }
 `;
 
-export interface ISocials {
-  externalLink: string;
+export type ISocials = {
   className: string;
-}
+  externalLink: string;
+};
 
-export function Socials() {
-  return (
-    <StyledSocials>
-      <ul>
-        <div className="line" aria-hidden="true"></div>
-        {socials.map(item => (
-          <li key={item.className}>
-            <a
-              href={item.externalLink}
-              className={item.className}
-              target="_blank"
-              rel="noreferrer"
-            >
-              { }
-            </a>
-          </li>
-        ))}
-        <div className="line" aria-hidden="true">
-          {' '}
-        </div>
-      </ul>
-    </StyledSocials>
-  );
-}
+export const Socials = () => (
+  <StyledSocials>
+    <ul>
+      <div className="line" aria-hidden="true"></div>
+      {socials.map(item => (
+        <li key={item.className}>
+          <a
+            href={item.externalLink}
+            className={item.className}
+            target="_blank"
+            rel="noreferrer"
+          >
+            { }
+          </a>
+        </li>
+      ))}
+      <div className="line" aria-hidden="true">
+        {' '}
+      </div>
+    </ul>
+  </StyledSocials>
+);

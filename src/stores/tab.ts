@@ -1,9 +1,9 @@
 import { create } from 'zustand';
 
-interface TabStore {
-  tab: number;
+type TabStore = {
   setTabStore: (newTab: number) => void;
-}
+  tab: number;
+};
 
 export const useTabStore = create<TabStore>(set => ({
   setTabStore: newTab => set({ tab: newTab }),

@@ -5815,6 +5815,11 @@ eslint-plugin-perfectionist@^4.9.0:
     "@typescript-eslint/utils" "^8.24.0"
     natural-orderby "^5.0.0"
 
+eslint-plugin-prefer-arrow@1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prefer-arrow/-/eslint-plugin-prefer-arrow-1.2.3.tgz#e7fbb3fa4cd84ff1015b9c51ad86550e55041041"
+  integrity sha512-J9I5PKCOJretVuiZRGvPQxCbllxGAV/viI20JO3LYblAodofBxyMnZAJ+WGeClHgANnSJberTNoFWWjrWKBuXQ==
+
 eslint-plugin-react-debug@1.28.0:
   version "1.28.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-debug/-/eslint-plugin-react-debug-1.28.0.tgz#4ec073107f69b0ea1252e734ce79927be0c64252"

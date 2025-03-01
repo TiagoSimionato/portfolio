@@ -42,20 +42,18 @@ const StyledStack = styled.div`
   }
 `;
 
-export function Stack({ externalLink, imgAlt, imgPath, name }: IStack) {
-  return (
-    <StyledStack>
-      <a
-        href={externalLink || '#'}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Image
-          src={imgPath}
-          alt={imgAlt}
-        />
-        <h3>{name}</h3>
-      </a>
-    </StyledStack>
-  );
-}
+export const Stack = ({ externalLink, imgAlt, imgPath, name }: IStack) => (
+  <StyledStack>
+    <a
+      href={externalLink || '#'}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <Image
+        src={imgPath}
+        alt={imgAlt}
+      />
+      <h3>{name}</h3>
+    </a>
+  </StyledStack>
+);
