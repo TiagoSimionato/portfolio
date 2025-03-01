@@ -1,19 +1,13 @@
-import styled from 'styled-components';
-
-const StyledFooter = styled.footer`
-  width: 100%;
-  text-align: center;
-  color: white;
-  padding: 1.5rem;
-  box-sizing: border-box;
-`;
+import { Stack, Typography } from '@mui/material';
 
 export const Footer = () => (
-  <StyledFooter>
-    &copy;
-    {' '}
-    {new Date().getFullYear()}
-    {' '}
-    | Tiago Henrique Simionato Machado
-  </StyledFooter>
+  <Stack component="footer" sx={{ alignItems: 'center', alignSelf: 'stretch', padding: '1.5rem' }}>
+    <Typography>
+      &copy;
+      {' '}
+      {new Date().getFullYear()}
+      {' '}
+      | Tiago Henrique Simionato Machado
+    </Typography>
+  </Stack>
 );
