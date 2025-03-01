@@ -1,7 +1,7 @@
 'use client';
 
+import { BasePage } from 'components';
 import { tabs } from 'components/Header/constants';
-import BasePage from 'pages/BasePage';
 import { useTabStore } from 'stores/tab';
 
 const HomePage = () => {

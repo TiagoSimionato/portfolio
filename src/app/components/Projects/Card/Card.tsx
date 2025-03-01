@@ -1,4 +1,4 @@
-import type IProjectItem from 'common/interfaces/IProjectItem';
+import type IProjectItem from 'types/IProjectItem';
 import variables from 'common/variables.json';
 import Image from 'components/Image';
 import styled from 'styled-components';
@@ -27,9 +27,9 @@ const StyledCard = styled.div<ISCard>`
     width: ${props => props.cardWidth}px;
     border-radius: 1%;
     /*${props =>
-      props.active
-        ? `width: 500px; height: 400px;`
-        : ''} TODO IMPROVE CAROUSEL STYLE*/
+    props.active
+      ? `width: 500px; height: 400px;`
+      : ''} TODO IMPROVE CAROUSEL STYLE*/
   }
 
   .projectName {

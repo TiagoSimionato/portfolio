@@ -1,10 +1,9 @@
 import type { PropsWithChildren } from 'react';
 import { Stack } from '@mui/material';
+import { Socials } from 'app/components';
 import variables from 'common/variables.json';
-import Footer from 'components/Footer';
+import { Footer, Header } from 'components';
 import GlobalStyles from 'components/GlobalStyles';
-import Header from 'components/Header';
-import Socials from 'components/Socials';
 
 const Background = (
   <Stack sx={{

@@ -3,7 +3,7 @@ import variables from 'common/variables.json';
 import projectsData from 'data/projects';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import Card from './Card';
+import { Card } from './Card';
 import '@splidejs/react-splide/css';
 
 const StyledProjects = styled.section`

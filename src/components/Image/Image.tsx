@@ -1,4 +1,4 @@
-import type Formats from 'common/types/ImageFormats';
+import type Formats from 'types/ImageFormats';
 
 type Props = {
   alt: string;

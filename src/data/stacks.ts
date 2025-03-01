@@ -1,4 +1,4 @@
-import type { IStack } from 'common/interfaces/IStack';
+import type { IStack } from 'types/IStack';
 
 const stacks: IStack[] = [
   {

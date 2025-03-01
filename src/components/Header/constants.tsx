@@ -1,6 +1,4 @@
-import AboutMe from 'components/AboutMe';
-import Projects from 'components/Projects';
-import TechStack from 'components/TechStack';
+import { AboutMe, Projects, TechStack } from 'app/components';
 
 export const tabs = [
   {

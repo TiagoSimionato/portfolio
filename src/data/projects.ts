@@ -1,4 +1,4 @@
-import type IProjectItem from 'common/interfaces/IProjectItem';
+import type IProjectItem from 'types/IProjectItem';
 
 const projects: IProjectItem[] = [
   {

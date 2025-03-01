@@ -1,4 +1,4 @@
-import type { IStack } from 'common/interfaces/IStack';
+import type { IStack } from 'types/IStack';
 import variables from 'common/variables.json';
 import Image from 'components/Image';
 import styled from 'styled-components';

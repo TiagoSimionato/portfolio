@@ -1,4 +1,4 @@
-import type { ISocials } from 'components/Socials/Socials';
+import type { ISocials } from 'app/components';
 
 const socials: ISocials[] = [
   {

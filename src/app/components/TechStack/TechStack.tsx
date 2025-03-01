@@ -1,7 +1,7 @@
 import variables from 'common/variables.json';
 import stacks from 'data/stacks';
 import styled from 'styled-components';
-import Stack from './Stack';
+import { Stack } from './Stack';
 
 const StyledTechStack = styled.section`
   white-space: nowrap;
