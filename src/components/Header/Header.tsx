@@ -15,7 +15,7 @@ export function Header() {
   }, [setDrawer, smallScreen]);
 
   return (
-    <Stack direction="row" justifyContent="space-between" alignItems="center" minHeight={65} zIndex={2} paddingX={{ md: '4rem', xs: '1rem' }} sx={{ backdropFilter: 'blur(5px)', backgroundColor: variables.colors.primaryTransparent }}>
+    <Stack direction="row" justifyContent="space-between" alignItems="center" minHeight={65} paddingX={{ md: '4rem', xs: '1rem' }} sx={{ backdropFilter: 'blur(5px)', backgroundColor: variables.colors.primaryTransparent }}>
       <Typography component="h1" sx={{ fontSize: { md: '1.75rem', xs: '1rem' } }}>
         <Link
           href="https://github.com/tiagosimionato"
