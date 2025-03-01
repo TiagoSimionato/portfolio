@@ -1,100 +1,43 @@
+import { Button, Link, Stack, Tab, Tabs, Typography, useMediaQuery } from '@mui/material';
 import variables from 'common/variables.json';
-import Navigation from 'components/Navigation';
-import navHeaderData from 'data/navigationHeader';
-import { useEffect, useState } from 'react';
-import styled from 'styled-components';
-
-const StyledHeader = styled.header`
-  display: flex;
-  justify-content: space-between;
-  padding: 1.5rem 6.25rem;
-  position: sticky;
-  top: 0;
-  background: ${variables.colors.primaryTransparent};
-  backdrop-filter: blur(5px);
-  z-index: 2;
-
-  button {
-    background-color: transparent;
-    border: none;
-    margin: 0;
-    padding: 0;
-    color: white;
-    font-size: 2.5rem;
-    cursor: pointer;
-
-    display: none;
-  }
-
-  h1 {
-    color: white;
-    font-size: 1.75rem;
-  }
-
-  @media screen and (max-width: ${variables.breakpoints.tablet}) {
-    align-items: center;
-    padding: 1.5rem 3rem;
-
-    h1 {
-      font-size: 1rem;
-    }
-  }
-
-  @media screen and (max-width: ${variables.breakpoints.phone}) {
-    padding: 10px 1rem;
-
-    button {
-      display: block;
-    }
-  }
-`;
+import { useEffect } from 'react';
+import { useTabStore } from 'stores/tab';
+import { useToggle } from 'usehooks-ts';
+import { tabs } from './constants';
 
 export function Header() {
-  const phoneLayoutWidth = Number(
-    variables.breakpoints.phone.substring(
-      0,
-      variables.breakpoints.phone.length - 2,
-    ),
-  );
-  const [isPhoneLayout, setIsPhoneLayout] = useState(
-    document.documentElement.clientWidth <= phoneLayoutWidth,
-  );
-
-  const [isNavActive, setNavActive] = useState(!isPhoneLayout);
+  const smallScreen = useMediaQuery('(max-width:800px)');
+  const [_, toggleDrawer, setDrawer] = useToggle(false);
+  const { setTabStore, tab } = useTabStore();
 
   useEffect(() => {
-    const isPhoneLayout = () => {
-      setIsPhoneLayout(
-        document.documentElement.clientWidth <= phoneLayoutWidth,
-      );
-    };
-    window.addEventListener('resize', isPhoneLayout);
-
-    return () => window.removeEventListener('resize', isPhoneLayout);
-  }, [phoneLayoutWidth]);
-
-  useEffect(() => {
-    setNavActive(!isPhoneLayout);
-  }, [isPhoneLayout]);
+    smallScreen && setDrawer(false);
+  }, [setDrawer, smallScreen]);
 
   return (
-    <StyledHeader>
-      <h1>
-        <a
+    <Stack direction="row" justifyContent="space-between" alignItems="center" minHeight={65} zIndex={2} paddingX={{ md: '4rem', xs: '1rem' }} sx={{ backdropFilter: 'blur(5px)', backgroundColor: variables.colors.primaryTransparent }}>
+      <Typography component="h1" sx={{ fontSize: { md: '1.75rem', xs: '1rem' } }}>
+        <Link
           href="https://github.com/tiagosimionato"
           target="_blank"
           rel="noreferrer"
+          sx={{ color: 'white' }} // TODO REMOVE
+          underline="none"
         >
           Tiago Henrique
-        </a>
-      </h1>
-      <button
+        </Link>
+      </Typography>
+      <Button
         className="bx bxs-grid"
-        onClick={() => (isNavActive ? setNavActive(false) : setNavActive(true))}
-        type="button"
-      >
-      </button>
-      <Navigation items={navHeaderData} active={isNavActive} />
-    </StyledHeader>
+        onClick={toggleDrawer}
+        style={{ display: smallScreen ? undefined : 'none' }}
+        sx={{ fontSize: '2.5rem' }}
+      />
+      <Tabs value={tab} onChange={(_, value) => setTabStore(value)} sx={{ display: smallScreen ? 'none' : undefined }}>
+        {tabs.map(({ label }, index) => (
+          <Tab key={label} label={label} value={index} sx={{ paddingY: '1.5rem' }} />
+        ))}
+      </Tabs>
+    </Stack>
   );
 }

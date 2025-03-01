@@ -7,9 +7,11 @@ export default config({
   jsx: true,
   react: true,
   rules: {
+    'antfu/top-level-function': 'off',
     'perfectionist/sort-exports': 'error',
     'perfectionist/sort-object-types': 'error',
     'perfectionist/sort-objects': 'error',
+    'react-refresh/only-export-components': 'off',
     'react/prefer-shorthand-boolean': 'error',
     'unused-imports/no-unused-imports': 'error',
   },

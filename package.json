@@ -21,8 +21,6 @@
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.58",
     "@types/react": "^18.2.27",
-    "@types/react-dom": "^18.2.12",
-    "@types/react-router-dom": "^5.3.3",
     "imagemin": "^8.0.1",
     "imagemin-gif2webp": "^3.0.0",
     "imagemin-webp": "^8.0.0",
@@ -30,12 +28,13 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-multi-carousel": "^2.8.4",
-    "react-router-dom": "^6.16.0",
     "react-scripts": "5.0.1",
     "styled-components": "^6.0.8",
     "typescript": "^4.9.5",
+    "usehooks-ts": "^3.1.1",
     "uuid": "^9.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zustand": "^5.0.3"
   },
   "browserslist": {
     "production": [
