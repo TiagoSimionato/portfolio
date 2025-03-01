@@ -1,19 +1,16 @@
+import { Stack, Typography } from '@mui/material';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import variables from 'common/variables.json';
 import projectsData from 'data/projects';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { tokens } from 'tokens';
 import { Card } from './Card';
 import '@splidejs/react-splide/css';
 
 const StyledProjects = styled.section`
-  padding: 3.75rem 6.25rem;
-
-  .secTitle {
-    margin-bottom: 3.75rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
+  padding: 2rem 0;
+  margin: -1rem;
 
   .splide {
     padding: 0 3rem;
@@ -42,8 +39,8 @@ const StyledProjects = styled.section`
     visibility: hidden;
   }
 
-  @media screen and (max-width: ${variables.breakpoints.tablet}) {
-    padding: 3.75rem 0;
+  @media screen and (max-width: ${tokens.breakpoints.md}) {
+    padding: 1rem 0;
 
     .splide {
       padding: 0 3rem 2rem 3rem;
@@ -57,13 +54,8 @@ const StyledProjects = styled.section`
   }
 
   @media screen and (max-width: ${variables.breakpoints.phone}) {
-    .secTitle {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
-
     .splide {
-      padding: 3.5rem 0.5rem 2rem 0.5rem;
+      padding: 3.5rem 0rem 2rem 0rem;
     }
 
     .splide__arrow--prev {
@@ -114,8 +106,8 @@ export const Projects = () => {
 
   return (
     <StyledProjects id="projects">
-      <h2 className="secTitle">Projetos realizados</h2>
-      <div className="wrapper">
+      <Typography variant="h2" textAlign="center" pb={{ md: '3.75rem', xs: '1.5rem' }}>Projetos realizados</Typography>
+      <Stack>
         <Splide
           options={{
             autoHeight: true,
@@ -137,8 +129,7 @@ export const Projects = () => {
             </SplideSlide>
           ))}
         </Splide>
-      </div>
-      {/* active={index === active ? true : false} */}
+      </Stack>
     </StyledProjects>
   );
 };

@@ -55,10 +55,8 @@ body {
   font-family: 'Poppins' , sans-serif;
   margin: 0;
   min-height: 100vh;
-	color: white;
 }
 a {
-	color: white;
 	text-decoration: none;
 }
 a:hover {

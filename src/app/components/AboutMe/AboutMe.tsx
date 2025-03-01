@@ -1,5 +1,6 @@
 import { Stack, Typography } from '@mui/material';
 import Image from 'components/Image';
+import { tokens } from 'tokens';
 
 export const AboutMe = () => (
   <Stack
@@ -9,7 +10,7 @@ export const AboutMe = () => (
       flexDirection: { md: 'row', xs: 'column' },
       gap: '2rem',
       margin: 'auto',
-      maxWidth: 1440,
+      maxWidth: tokens.breakpoints.xl,
     }}
   >
     <Image

@@ -1,4 +1,5 @@
 import type IProjectItem from 'types/IProjectItem';
+import { Typography } from '@mui/material';
 import variables from 'common/variables.json';
 import Image from 'components/Image';
 import styled from 'styled-components';
@@ -32,19 +33,6 @@ const StyledCard = styled.div<ISCard>`
       : ''} TODO IMPROVE CAROUSEL STYLE*/
   }
 
-  .projectName {
-    font-weight: 600;
-    font-size: 2rem;
-    line-height: 3rem;
-    padding: 1rem 1.5rem 0.5rem 1.5rem;
-    margin-bottom: 0.5rem;
-    text-align: center;
-    text-decoration: underline;
-    text-decoration-color: ${variables.colors.contrast};
-    text-underline-offset: 13px;
-    text-decoration-thickness: 1px;
-  }
-
   .description {
     line-height: 1.5rem;
     padding: 0 1.5rem 1.5rem 1.5rem;
@@ -54,7 +42,6 @@ const StyledCard = styled.div<ISCard>`
 
   @media screen and (max-width: ${variables.breakpoints.phone}) {
     .projectName {
-      text-align: center;
       padding: 0 0 0.5rem 0;
       margin: 1rem 1rem 0.5rem 1rem;
     }
@@ -84,7 +71,20 @@ export const Card = ({
   <StyledCard cardWidth={cardWidth}>
     <a href={externalLink} target="_blank" rel="noreferrer">
       <Image src={imgPath} alt={imgAlt} />
-      <h2 className="projectName">{name}</h2>
+      <Typography
+        variant="h3"
+        className="projectName"
+        sx={{
+          marginBottom: '0.5rem',
+          padding: '1rem 1.5rem 0.5rem 1.5rem',
+          textDecorationColor: variables.colors.contrast,
+          textDecorationLine: 'underline',
+          textDecorationThickness: 1,
+          textUnderlineOffset: 13,
+        }}
+      >
+        {name}
+      </Typography>
       <p className="description">{description}</p>
     </a>
   </StyledCard>

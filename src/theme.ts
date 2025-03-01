@@ -10,6 +10,9 @@ export const theme = createTheme({
     },
   },
   typography: {
+    allVariants: {
+      color: tokens.colors.white,
+    },
     body1: {
       textAlign: 'justify',
     },
@@ -22,6 +25,12 @@ export const theme = createTheme({
       'fontSize': '2.275rem',
       'fontWeight': 600,
       'lineHeight': '2.75rem',
+    },
+    h3: {
+      fontSize: '2rem',
+      fontWeight: 600,
+      lineHeight: '3rem',
+      textAlign: 'center',
     },
   },
 });
