@@ -1,139 +1,100 @@
+import { List, ListItem, Stack as MUISTack, Typography } from '@mui/material';
 import variables from 'common/variables.json';
 import stacks from 'data/stacks';
-import styled from 'styled-components';
-import { Stack } from './Stack';
-
-const StyledTechStack = styled.section`
-  white-space: nowrap;
-  overflow: hidden;
-  padding: 3.75rem 6.25rem;
-  position: relative;
-
-  h2 {
-    padding: 0 3rem 4rem 3rem;
-    white-space: normal;
-  }
-
-  .preWrapper {
-    overflow: hidden;
-  }
-
-  .wrapper {
-    animation: stackSlide infinite 35s linear;
-    display: inline-block;
-    min-width: 100%;
-    width: fit-content;
-  }
-
-  .preWrapper:hover .wrapper {
-    animation-play-state: paused;
-  }
-
-  ul {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  @keyframes stackSlide {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
-
-  @media screen and (max-width: ${variables.breakpoints.tablet}) {
-    padding: 3.75rem 1.5rem;
-
-    .secTitle {
-      padding: 0 0 4rem 0;
-    }
-
-    .preWrapper {
-      border-radius: 16px;
-    }
-
-    .wrapper_0 {
-      animation: none;
-      box-sizing: border-box;
-
-      ul {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(115px, 1fr));
-        row-gap: 1rem;
-        padding: 1rem 0;
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        border-radius: 16px;
-
-        li {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-          z-index: 1;
-        }
-
-        span {
-          position: absolute;
-          inset: 5px;
-          border-radius: 16px;
-          background-color: ${variables.colors.primary};
-          z-index: 0;
-        }
-      }
-
-      ul::after {
-        content: '';
-        position: absolute;
-        width: 300vw;
-        left: -100vw;
-        height: 50%;
-        background: linear-gradient(
-          50deg,
-          ${variables.colors.contrast},
-          ${variables.colors.contrast}
-        );
-        animation: borderAnimation 4s ease-in-out infinite alternate;
-        animation-delay: -2s;
-        z-index: -1;
-      }
-    }
-
-    .wrapper_1 {
-      display: none;
-    }
-  }
-
-  @keyframes borderAnimation {
-    0% {
-      transform: rotate(120deg);
-    }
-
-    100% {
-      transform: rotate(420deg);
-    }
-  }
-`;
+import { Card } from './Card';
 
 export const TechStack = () => (
-  <StyledTechStack id="techs">
-    <h2 className="secTitle">Tecnologias conhecidas</h2>
-    <div className="preWrapper">
+  <MUISTack sx={{
+    ' @keyframes borderAnimation': {
+      from: {
+        transform: 'rotate(0deg)',
+      },
+      to: {
+        transform: 'rotate(360deg)',
+      },
+    },
+    '@keyframes stackSlide': {
+      from: {
+        transform: 'translateX(0)',
+      },
+      to: {
+        transform: 'translateX(-100%)',
+      },
+    },
+    'padding': '3.75rem 0',
+  }}
+  >
+    <Typography
+      variant="h2"
+      sx={{
+        padding: { md: '0 3rem 4rem 3rem', xs: '0 0 4rem 0' },
+        whiteSpace: 'normal',
+      }}
+    >
+      Tecnologias conhecidas
+    </Typography>
+    <MUISTack
+      direction="row"
+      overflow="hidden"
+      borderRadius="16px"
+      sx={{
+        ':hover .wrapper': {
+          animationPlayState: 'paused',
+        },
+      }}
+    >
       {[1, 2].map((_, index) => (
-        <div key={_} className={`wrapper wrapper_${index}`}>
-          <ul>
+        <MUISTack
+          key={`wrapper_${_}`}
+          className={`wrapper_${index}`}
+          sx={{
+            animation: { md: 'stackSlide infinite 35s linear', xs: 'none' },
+            display: index === 1 ? { md: 'inline-block', xs: 'none' } : 'inline-block',
+            minWidth: { md: 'auto', xs: '100%' },
+            width: 'fit-content',
+          }}
+        >
+          <List sx={{
+            '::after': {
+              animation: 'borderAnimation 5s linear infinite',
+              animationDelay: -2,
+              background: `linear-gradient(50deg, ${variables.colors.contrast}, ${variables.colors.contrast})`,
+              content: { md: 'none', xs: '""' },
+              height: 0.5,
+              left: '-100vw',
+              position: 'absolute',
+              width: '300vw',
+              zIndex: -1,
+            },
+            'alignItems': 'center',
+            'display': { md: 'flex', xs: 'grid' },
+            'gridTemplateColumns': 'repeat(auto-fill, minmax(115px, 1fr))',
+            'justifyContent': 'space-around',
+            'padding': '1rem 0',
+            'position': 'relative',
+            'rowGap': '1rem',
+          }}
+          >
             {stacks.map(stack => (
-              <li key={stack.name}>
-                <Stack {...stack} />
-              </li>
+              <ListItem key={stack.name} sx={{ justifyContent: 'center', zIndex: 1 }}>
+                <Card {...stack} />
+              </ListItem>
             ))}
-            <span></span>
-          </ul>
-        </div>
+            <MUISTack
+              aria-hidden
+              sx={{
+                backgroundColor: `${variables.colors.primary}`,
+                borderRadius: '16px',
+                display: { md: 'none', xs: 'static' },
+                inset: '5px',
+                position: 'absolute',
+                zIndex: 0,
+              }}
+            >
+            </MUISTack>
+          </List>
+        </MUISTack>
       ))}
-    </div>
-  </StyledTechStack>
+    </MUISTack>
+  </MUISTack>
 );

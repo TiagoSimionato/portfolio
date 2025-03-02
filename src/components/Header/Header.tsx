@@ -6,7 +6,7 @@ import { useToggle } from 'usehooks-ts';
 import { tabs } from './constants';
 
 export const Header = () => {
-  const smallScreen = useMediaQuery('(max-width:800px)');
+  const smallScreen = useMediaQuery('(max-width:900px)'); // TODO FIX
   const [_, toggleDrawer, setDrawer] = useToggle(false);
   const { setTabStore, tab } = useTabStore();
 

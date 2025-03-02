@@ -25,8 +25,10 @@ export const BasePage = ({ children }: PropsWithChildren) => (
     <GlobalStyles />
     {Background}
     <Header />
-    <Stack paddingX={PAGE_PADDING} flexGrow={1} justifyContent="end" height="100%">
-      {children}
+    <Stack paddingX={PAGE_PADDING} flex={1} justifyContent="center" height="100%">
+      <Stack flex={1}>
+        {children}
+      </Stack>
       <Socials />
       <Footer />
     </Stack>

@@ -3,15 +3,13 @@ import Image from 'components/Image';
 import { tokens } from 'tokens';
 
 export const AboutMe = () => (
-  <Stack
-    id="aboutme"
-    sx={{
-      alignItems: 'center',
-      flexDirection: { md: 'row', xs: 'column' },
-      gap: '2rem',
-      margin: 'auto',
-      maxWidth: tokens.breakpoints.xl,
-    }}
+  <Stack sx={{
+    alignItems: 'center',
+    flexDirection: { md: 'row', xs: 'column' },
+    gap: '2rem',
+    margin: 'auto',
+    maxWidth: tokens.breakpoints.xl,
+  }}
   >
     <Image
       src="assets/images/tiago.jpg"
