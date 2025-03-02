@@ -18,12 +18,14 @@ const Background = (
   />
 );
 
+export const PAGE_PADDING = { md: '4rem', xs: '1.5rem' };
+
 export const BasePage = ({ children }: PropsWithChildren) => (
   <>
     <GlobalStyles />
     {Background}
     <Header />
-    <Stack paddingX={{ md: '4rem', xs: '1.5rem' }} flexGrow={1} justifyContent="end" height="100%">
+    <Stack paddingX={PAGE_PADDING} flexGrow={1} justifyContent="end" height="100%">
       {children}
       <Socials />
       <Footer />

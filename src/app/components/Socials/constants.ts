@@ -1,6 +1,4 @@
-import type { ISocials } from 'app/components';
-
-const socials: ISocials[] = [
+export const socials = [
   {
     className: 'bx bxl-github',
     externalLink: 'https://github.com/TiagoSimionato',
@@ -9,6 +7,4 @@ const socials: ISocials[] = [
     className: 'bx bxl-linkedin',
     externalLink: 'https://www.linkedin.com/in/tiago-henrique-simionato-machado/',
   },
-];
-
-export default socials;
+] as const;

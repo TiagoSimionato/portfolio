@@ -1,77 +1,55 @@
-import variables from 'common/variables.json';
-import socials from 'data/socials';
-import styled from 'styled-components';
+import { Link, List, ListItem, Stack } from '@mui/material';
+import { PAGE_PADDING } from 'components';
+import { socials } from './constants';
 
-const StyledSocials = styled.div`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 4rem;
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-
-    a {
-      font-size: 30px;
-      transition: 0.1s ease-out;
-    }
-
-    a:hover {
-      transform: scale(1.2);
-    }
-  }
-
-  .line {
-    height: 80px;
-    background-color: white;
-    width: 1px;
-  }
-
-  @media screen and (max-width: ${variables.breakpoints.tablet}) {
-    position: static;
-    width: auto;
-    padding-top: 1.5rem;
-
-    ul {
-      flex-direction: row;
-      justify-content: center;
-    }
-
-    .line {
-      height: 1px;
-      width: 80px;
-      display: block;
-    }
-  }
-`;
-
-export type ISocials = {
-  className: string;
-  externalLink: string;
-};
+const Line = (
+  <Stack
+    aria-hidden
+    sx={{
+      bgcolor: 'white',
+      height: { md: 80, xs: '1px' },
+      width: { md: '1px', xs: 80 },
+    }}
+  />
+);
 
 export const Socials = () => (
-  <StyledSocials>
-    <ul>
-      <div className="line" aria-hidden="true"></div>
-      {socials.map(item => (
-        <li key={item.className}>
-          <a
-            href={item.externalLink}
-            className={item.className}
+  <Stack sx={{
+    bottom: 0,
+    left: 0,
+    position: { md: 'fixed', xs: 'static' },
+    width: { md: PAGE_PADDING.md, xs: 'auto' },
+  }}
+  >
+    <List sx={{
+      alignItems: 'center',
+      display: 'flex',
+      flexDirection: { md: 'column', xs: 'row' },
+      gap: '1rem',
+      justifyContent: 'center',
+    }}
+    >
+      {Line}
+      {socials.map(({ className, externalLink }) => (
+        <ListItem key={className} sx={{ justifyContent: 'center', width: 'fit-content' }} disablePadding>
+          <Link
+            href={externalLink}
+            className={className}
             target="_blank"
             rel="noreferrer"
-          >
-            { }
-          </a>
-        </li>
+            underline="none"
+            sx={{
+              ':hover': {
+                scale: 1.2,
+              },
+              'color': 'white', // TODO REMOVE
+              'fontSize': 30,
+              'transition': '0.1s ease-out',
+            }}
+          />
+        </ListItem>
       ))}
-      <div className="line" aria-hidden="true">
-        {' '}
-      </div>
-    </ul>
-  </StyledSocials>
+      {Line}
+    </List>
+  </Stack>
 );
