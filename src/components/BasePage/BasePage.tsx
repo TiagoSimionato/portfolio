@@ -1,12 +1,12 @@
 import type { PropsWithChildren } from 'react';
 import { Stack } from '@mui/material';
 import { Socials } from 'app/components';
-import variables from 'common/variables.json';
 import { Footer, Header } from 'components';
+import { tokens } from 'tokens';
 
 const Background = (
   <Stack sx={{
-    backgroundImage: `linear-gradient(${variables.colors.primary},${variables.colors.secondary})`,
+    backgroundImage: `linear-gradient(${tokens.colors.primary},${tokens.colors.secondary})`,
     bottom: 0,
     left: 0,
     position: 'fixed',

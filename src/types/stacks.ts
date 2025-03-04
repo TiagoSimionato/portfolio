@@ -1,10 +1,8 @@
 import type Formats from 'types/ImageFormats';
 
-type IProjectItem = {
-  description: string;
-  externalLink: string;
+export type StackItem = {
+  externalLink?: string;
   imgAlt: string;
   imgPath: `${string}.${Formats}`;
   name: string;
 };
-export default IProjectItem;

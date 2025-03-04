@@ -1,9 +1,9 @@
 import { Button, Link, Stack, Tab, Tabs, Typography, useMediaQuery } from '@mui/material';
-import variables from 'common/variables.json';
+import { tabs } from 'app/constants';
 import { useEffect } from 'react';
 import { useTabStore } from 'stores/tab';
+import { tokens } from 'tokens';
 import { useToggle } from 'usehooks-ts';
-import { tabs } from './constants';
 
 export const Header = () => {
   const smallScreen = useMediaQuery('(max-width:900px)'); // TODO FIX
@@ -15,7 +15,7 @@ export const Header = () => {
   }, [setDrawer, smallScreen]);
 
   return (
-    <Stack direction="row" justifyContent="space-between" alignItems="center" minHeight={65} paddingX={{ md: '4rem', xs: '1rem' }} sx={{ backdropFilter: 'blur(5px)', backgroundColor: variables.colors.primaryTransparent }}>
+    <Stack direction="row" justifyContent="space-between" alignItems="center" minHeight={65} paddingX={{ md: '4rem', xs: '1rem' }} sx={{ backdropFilter: 'blur(5px)', backgroundColor: tokens.colors.primaryTransparent }}>
       <Typography component="h1" sx={{ fontSize: { md: '1.75rem', xs: '1rem' } }}>
         <Link
           href="https://github.com/tiagosimionato"

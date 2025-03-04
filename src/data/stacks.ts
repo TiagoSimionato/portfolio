@@ -1,6 +1,6 @@
-import type { IStack } from 'types/IStack';
+import type { StackItem } from 'types/stacks';
 
-const stacks: IStack[] = [
+const stacks: StackItem[] = [
   {
     externalLink: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript',
     imgAlt: 'logo javasript',

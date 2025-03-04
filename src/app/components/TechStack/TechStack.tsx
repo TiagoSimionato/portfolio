@@ -1,5 +1,4 @@
 import { List, ListItem, Stack as MUISTack, Typography } from '@mui/material';
-import variables from 'common/variables.json';
 import stacks from 'data/stacks';
 import { tokens } from 'tokens';
 import { Card } from './Card';
@@ -82,7 +81,7 @@ export const TechStack = () => (
             <MUISTack
               aria-hidden
               sx={{
-                backgroundColor: `${variables.colors.primary}`,
+                backgroundColor: `${tokens.colors.primary}`,
                 borderRadius: '16px',
                 display: { md: 'none', xs: 'static' },
                 inset: '5px',

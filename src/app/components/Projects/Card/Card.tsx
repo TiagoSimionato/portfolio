@@ -1,13 +1,12 @@
-import type IProjectItem from 'types/IProjectItem';
+import type { ProjectItem } from 'types/projects';
 import { Link, Stack, Typography } from '@mui/material';
-import variables from 'common/variables.json';
 import { PAGE_PADDING } from 'components';
 import Image from 'components/Image';
 import { tokens } from 'tokens';
 
 type CardProps = {
   active?: boolean;
-} & IProjectItem;
+} & ProjectItem;
 
 export const CARD_MAX_WIDTH = 500;
 
@@ -23,7 +22,7 @@ export const Card = ({
   <Stack
     m={`0 ${CARD_MARGIN}`}
     sx={{
-      backgroundColor: variables.colors.primaryTransparent,
+      backgroundColor: tokens.colors.primaryTransparent,
       borderRadius: 0.1,
       boxShadow: '1px 1px 20px -5px rgba(0, 0, 0, 0.7)',
       display: 'flex',
@@ -37,12 +36,12 @@ export const Card = ({
       target="_blank"
       rel="noreferrer"
       sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        flexGrow: 1,
-        ":hover *": {
-          color: tokens.colors.contrast
-        }
+        ':hover *': {
+          color: tokens.colors.contrast,
+        },
+        'display': 'flex',
+        'flexDirection': 'column',
+        'flexGrow': 1,
       }}
     >
       <Image
@@ -56,10 +55,10 @@ export const Card = ({
         m={{ md: 0, xs: '1rem 1rem 0.5rem 1rem' }}
         mb="0.5rem"
         sx={{
-          textDecorationColor: variables.colors.contrast,
+          textDecorationColor: tokens.colors.contrast,
           textDecorationLine: 'underline',
           textDecorationThickness: 1,
-          textUnderlineOffset: 13
+          textUnderlineOffset: 13,
         }}
       >
         {name}

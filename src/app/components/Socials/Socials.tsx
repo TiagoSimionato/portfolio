@@ -1,12 +1,13 @@
 import { Link, List, ListItem, Stack } from '@mui/material';
 import { PAGE_PADDING } from 'components';
+import { tokens } from 'tokens';
 import { socials } from './constants';
 
 const Line = (
   <Stack
     aria-hidden
     sx={{
-      bgcolor: 'white',
+      bgcolor: tokens.colors.white,
       height: { md: 80, xs: '1px' },
       width: { md: '1px', xs: 80 },
     }}
