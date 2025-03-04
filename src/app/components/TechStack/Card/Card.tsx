@@ -1,9 +1,9 @@
-import type { StackItem } from 'types/stacks';
+import type { StackItem } from 'types';
 import { Link, Stack, Typography, useMediaQuery } from '@mui/material';
-import Image from 'components/Image';
+import Image from 'next/image';
 import { tokens } from 'tokens';
 
-export const Card = ({ externalLink, imgAlt, imgPath, name }: StackItem) => {
+export const Card = ({ externalLink, img, imgAlt, name }: StackItem) => {
   const smallScreen = useMediaQuery(`(max-width:${tokens.breakpoints.md}px)`);
   return (
     <Stack>
@@ -14,9 +14,10 @@ export const Card = ({ externalLink, imgAlt, imgPath, name }: StackItem) => {
         sx={{ ':hover *': { color: tokens.colors.contrast } }}
       >
         <Image
-          src={imgPath}
+          src={img}
           alt={imgAlt}
-          style={smallScreen ? { height: 80, width: 80 } : { height: 150, width: 150 }}
+          height={smallScreen ? 80 : 150}
+          width={smallScreen ? 80 : 150}
         />
         <Typography textAlign="center" mt="1rem" mb="0.5rem">{name}</Typography>
       </Link>

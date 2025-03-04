@@ -1,6 +1,10 @@
-import { AboutMe, Projects, TechStack } from 'app/components';
+import { AboutMe, Hero, Projects, TechStack } from 'app/components';
 
 export const tabs = [
+  {
+    content: <Hero key="hero" />,
+    label: 'Home',
+  },
   {
     content: <AboutMe key="about" />,
     label: 'Sobre mim',

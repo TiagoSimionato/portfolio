@@ -1,5 +1,5 @@
 import { Stack, Typography } from '@mui/material';
-import Image from 'components/Image';
+import { Avatar } from 'components';
 import { tokens } from 'tokens';
 
 export const AboutMe = () => (
@@ -11,11 +11,7 @@ export const AboutMe = () => (
     maxWidth: tokens.breakpoints.xl,
   }}
   >
-    <Image
-      src="assets/images/tiago.jpg"
-      alt="Autor da Página"
-      style={{ borderRadius: '100%', boxShadow: '1px 1px 20px -5px rgba(0, 0, 0, 0.7)', height: 220, width: 220 }}
-    />
+    <Avatar />
     <Stack sx={{ gap: '1.5rem' }}>
       <Typography variant="h2">Sobre mim</Typography>
       <Typography>

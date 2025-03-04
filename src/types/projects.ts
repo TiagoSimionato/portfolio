@@ -1,9 +1,9 @@
-import type Formats from 'types/ImageFormats';
+import type { StaticImageData } from 'next/image';
 
 export type ProjectItem = {
   description: string;
   externalLink: string;
+  img: StaticImageData;
   imgAlt: string;
-  imgPath: `${string}.${Formats}`;
   name: string;
 };

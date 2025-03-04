@@ -1,7 +1,7 @@
-import type { ProjectItem } from 'types/projects';
+import type { ProjectItem } from 'types';
 import { Link, Stack, Typography } from '@mui/material';
 import { PAGE_PADDING } from 'components';
-import Image from 'components/Image';
+import Image from 'next/image';
 import { tokens } from 'tokens';
 
 type CardProps = {
@@ -15,8 +15,8 @@ const CARD_MARGIN = '0.5rem';
 export const Card = ({
   description,
   externalLink,
+  img,
   imgAlt,
-  imgPath,
   name,
 }: CardProps) => (
   <Stack
@@ -45,15 +45,14 @@ export const Card = ({
       }}
     >
       <Image
-        src={imgPath}
+        src={img}
         alt={imgAlt}
-        style={{ borderRadius: '1%', width: '100%' }}
+        style={{ borderRadius: '1%', height: 'fit-content', width: '100%' }}
       />
       <Typography
         variant="h3"
-        p={{ md: '1rem 1.5rem 0.5rem 1.5rem', xs: '0 0 0.5rem 0' }}
-        m={{ md: 0, xs: '1rem 1rem 0.5rem 1rem' }}
-        mb="0.5rem"
+        p={{ md: '1rem 1.5rem', xs: 0 }}
+        m={{ md: 0, xs: '1rem' }}
         sx={{
           textDecorationColor: tokens.colors.contrast,
           textDecorationLine: 'underline',

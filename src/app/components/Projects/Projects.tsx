@@ -38,7 +38,7 @@ export const Projects = () => (
           <Card
             name={item.name}
             description={item.description}
-            imgPath={item.imgPath}
+            img={item.img}
             imgAlt={item.imgAlt}
             externalLink={item.externalLink}
           />

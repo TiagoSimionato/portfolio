@@ -67,14 +67,20 @@ export const theme = createTheme({
       textAlign: 'justify',
     },
     fontFamily: poppins.style.fontFamily,
+    h1: {
+      '@media (min-width:900px)': {
+        fontSize: '1.75rem',
+      },
+      'fontSize': '1rem',
+      'fontWeight': 600,
+    },
     h2: {
-      '@media (min-width:800px)': {
+      '@media (min-width:900px)': {
         fontSize: '3rem',
       },
       'color': tokens.colors.contrast,
       'fontSize': '2.275rem',
       'fontWeight': 600,
-      'lineHeight': '2.75rem',
     },
     h3: {
       fontSize: '2rem',
