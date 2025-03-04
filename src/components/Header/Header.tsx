@@ -21,8 +21,6 @@ export const Header = () => {
           href="https://github.com/tiagosimionato"
           target="_blank"
           rel="noreferrer"
-          sx={{ color: 'white' }} // TODO REMOVE
-          underline="none"
         >
           Tiago Henrique
         </Link>

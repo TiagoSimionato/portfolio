@@ -3,7 +3,6 @@ import { Stack } from '@mui/material';
 import { Socials } from 'app/components';
 import variables from 'common/variables.json';
 import { Footer, Header } from 'components';
-import GlobalStyles from 'components/GlobalStyles';
 
 const Background = (
   <Stack sx={{
@@ -22,7 +21,6 @@ export const PAGE_PADDING = { md: '4rem', xs: '1rem' };
 
 export const BasePage = ({ children }: PropsWithChildren) => (
   <>
-    <GlobalStyles />
     {Background}
     <Header />
     <Stack paddingX={PAGE_PADDING} flex={1} justifyContent="center" height="100%">

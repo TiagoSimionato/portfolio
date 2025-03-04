@@ -11,8 +11,7 @@ export const Card = ({ externalLink, imgAlt, imgPath, name }: IStack) => {
         href={externalLink || '#'}
         target="_blank"
         rel="noreferrer"
-        underline="none"
-        sx={{ color: 'white' }}
+        sx={{ ":hover *": { color: tokens.colors.contrast } }}
       >
         <Image
           src={imgPath}

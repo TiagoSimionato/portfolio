@@ -39,12 +39,10 @@ export const Socials = () => (
             className={className}
             target="_blank"
             rel="noreferrer"
-            underline="none"
             sx={{
               ':hover': {
                 scale: 1.2,
               },
-              'color': 'white', // TODO REMOVE
               'fontSize': 30,
               'transition': '0.1s ease-out',
             }}

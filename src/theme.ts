@@ -3,10 +3,57 @@ import { poppins } from 'app/layout';
 import { tokens } from 'tokens';
 
 export const theme = createTheme({
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        '::-webkit-scrollbar': {
+          width: '0.5rem',
+        },
+        '::-webkit-scrollbar-track': {
+          background: tokens.colors.secondary,
+        },
+        '::-webkit-scrollbar-thumb': {
+          borderRadius: '100vw',
+          background: tokens.colors.tertiary,
+        },
+        '::-webkit-scrollbar-thumb:hover': {
+          background: tokens.colors.tertiaryLighter,
+        },
+        '@supports (scrollbar-color: red blue)': {
+          '*': {
+            scrollbarColor: `${tokens.colors.tertiary} ${tokens.colors.secondary}`,
+            scrollbarWidth: 'thin',
+          }
+        },
+        'body': {
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: '100vh',
+        },
+        'a:hover': {
+          color: tokens.colors.contrast
+        }
+      }
+    },
+    MuiList: {
+      styleOverrides: {
+        root: {
+          padding: 0,
+        },
+      },
+    },
+    MuiLink: {
+      defaultProps: {
+        underline: 'none',
+        color: 'textPrimary',
+      }
+    }
+  },
   palette: {
     primary: { main: tokens.colors.contrast },
     text: {
       secondary: tokens.colors.white,
+      primary: tokens.colors.white,
     },
   },
   typography: {
@@ -33,4 +80,7 @@ export const theme = createTheme({
       textAlign: 'center',
     },
   },
+  breakpoints: {
+    values: tokens.breakpoints
+  }
 });

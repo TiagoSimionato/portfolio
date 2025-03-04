@@ -3,6 +3,7 @@ import { Link, Stack, Typography } from '@mui/material';
 import variables from 'common/variables.json';
 import { PAGE_PADDING } from 'components';
 import Image from 'components/Image';
+import { tokens } from 'tokens';
 
 type CardProps = {
   active?: boolean;
@@ -35,8 +36,14 @@ export const Card = ({
       href={externalLink}
       target="_blank"
       rel="noreferrer"
-      underline="none"
-      sx={{ color: 'white', display: 'flex', flexDirection: 'column', flexGrow: 1 }}
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        flexGrow: 1,
+        ":hover *": {
+          color: tokens.colors.contrast
+        }
+      }}
     >
       <Image
         src={imgPath}
@@ -52,7 +59,7 @@ export const Card = ({
           textDecorationColor: variables.colors.contrast,
           textDecorationLine: 'underline',
           textDecorationThickness: 1,
-          textUnderlineOffset: 13,
+          textUnderlineOffset: 13
         }}
       >
         {name}
