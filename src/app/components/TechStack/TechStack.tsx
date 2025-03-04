@@ -1,16 +1,17 @@
 import { List, ListItem, Stack as MUISTack, Typography } from '@mui/material';
 import variables from 'common/variables.json';
 import stacks from 'data/stacks';
+import { tokens } from 'tokens';
 import { Card } from './Card';
 
 export const TechStack = () => (
   <MUISTack sx={{
     ' @keyframes borderAnimation': {
       from: {
-        transform: 'rotate(0deg)',
+        rotate: '0deg',
       },
       to: {
-        transform: 'rotate(360deg)',
+        rotate: '360deg',
       },
     },
     '@keyframes stackSlide': {
@@ -57,13 +58,14 @@ export const TechStack = () => (
           <List sx={{
             '::after': {
               animation: 'borderAnimation 5s linear infinite',
-              animationDelay: -2,
-              background: `linear-gradient(50deg, ${variables.colors.contrast}, ${variables.colors.contrast})`,
+              bgcolor: tokens.colors.contrast,
               content: { md: 'none', xs: '""' },
-              height: 0.5,
-              left: '-100vw',
+              height: 1,
+              left: '50%',
               position: 'absolute',
-              width: '300vw',
+              transform: 'scaleY(3)',
+              translate: '-50%',
+              width: 0.3,
               zIndex: -1,
             },
             'alignItems': 'center',
@@ -90,8 +92,7 @@ export const TechStack = () => (
                 position: 'absolute',
                 zIndex: 0,
               }}
-            >
-            </MUISTack>
+            />
           </List>
         </MUISTack>
       ))}
