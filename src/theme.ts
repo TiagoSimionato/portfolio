@@ -3,37 +3,46 @@ import { poppins } from 'app/layout';
 import { tokens } from 'tokens';
 
 export const theme = createTheme({
+  breakpoints: {
+    values: tokens.breakpoints,
+  },
   components: {
     MuiCssBaseline: {
       styleOverrides: {
         '::-webkit-scrollbar': {
           width: '0.5rem',
         },
-        '::-webkit-scrollbar-track': {
-          background: tokens.colors.secondary,
-        },
         '::-webkit-scrollbar-thumb': {
-          borderRadius: '100vw',
           background: tokens.colors.tertiary,
+          borderRadius: '100vw',
         },
         '::-webkit-scrollbar-thumb:hover': {
           background: tokens.colors.tertiaryLighter,
+        },
+        '::-webkit-scrollbar-track': {
+          background: tokens.colors.secondary,
         },
         '@supports (scrollbar-color: red blue)': {
           '*': {
             scrollbarColor: `${tokens.colors.tertiary} ${tokens.colors.secondary}`,
             scrollbarWidth: 'thin',
-          }
+          },
+        },
+        'a:hover': {
+          color: tokens.colors.contrast,
         },
         'body': {
           display: 'flex',
           flexDirection: 'column',
           minHeight: '100vh',
         },
-        'a:hover': {
-          color: tokens.colors.contrast
-        }
-      }
+      },
+    },
+    MuiLink: {
+      defaultProps: {
+        color: 'textPrimary',
+        underline: 'none',
+      },
     },
     MuiList: {
       styleOverrides: {
@@ -42,18 +51,12 @@ export const theme = createTheme({
         },
       },
     },
-    MuiLink: {
-      defaultProps: {
-        underline: 'none',
-        color: 'textPrimary',
-      }
-    }
   },
   palette: {
     primary: { main: tokens.colors.contrast },
     text: {
-      secondary: tokens.colors.white,
       primary: tokens.colors.white,
+      secondary: tokens.colors.white,
     },
   },
   typography: {
@@ -80,7 +83,4 @@ export const theme = createTheme({
       textAlign: 'center',
     },
   },
-  breakpoints: {
-    values: tokens.breakpoints
-  }
 });

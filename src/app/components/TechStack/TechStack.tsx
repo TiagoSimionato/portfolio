@@ -5,43 +5,40 @@ import { tokens } from 'tokens';
 import { Card } from './Card';
 
 export const TechStack = () => (
-  <MUISTack sx={{
-    ' @keyframes borderAnimation': {
-      from: {
-        rotate: '0deg',
+  <MUISTack
+    py="3.75rem"
+    sx={{
+      ' @keyframes borderAnimation': {
+        from: {
+          rotate: '0deg',
+        },
+        to: {
+          rotate: '360deg',
+        },
       },
-      to: {
-        rotate: '360deg',
+      '@keyframes stackSlide': {
+        from: {
+          transform: 'translateX(0)',
+        },
+        to: {
+          transform: 'translateX(-100%)',
+        },
       },
-    },
-    '@keyframes stackSlide': {
-      from: {
-        transform: 'translateX(0)',
-      },
-      to: {
-        transform: 'translateX(-100%)',
-      },
-    },
-    'padding': '3.75rem 0',
-  }}
+      'flexGrow': 1,
+    }}
   >
-    <Typography
-      variant="h2"
-      sx={{
-        padding: { md: '0 3rem 4rem 3rem', xs: '0 0 4rem 0' },
-        whiteSpace: 'normal',
-      }}
-    >
+    <Typography variant="h2" textAlign="center" pb={{ md: '3.75rem', xs: '1.5rem' }}>
       Tecnologias conhecidas
     </Typography>
     <MUISTack
       direction="row"
-      overflow="hidden"
-      borderRadius="16px"
+      my="auto"
       sx={{
         ':hover .wrapper': {
           animationPlayState: 'paused',
         },
+        'borderRadius': '16px',
+        'overflow': 'hidden',
       }}
     >
       {[1, 2].map((_, index) => (

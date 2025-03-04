@@ -1,8 +1,8 @@
 import { Stack, Typography } from '@mui/material';
 
 export const Footer = () => (
-  <Stack component="footer" sx={{ alignItems: 'center', alignSelf: 'stretch', padding: '1.5rem' }}>
-    <Typography>
+  <Stack component="footer" p="1.5rem" sx={{ alignSelf: 'stretch' }}>
+    <Typography textAlign="center">
       &copy;
       {' '}
       {new Date().getFullYear()}
