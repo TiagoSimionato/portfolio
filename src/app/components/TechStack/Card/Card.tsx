@@ -1,9 +1,10 @@
 import type { IStack } from 'types/IStack';
 import { Link, Stack as MUIStack, Typography, useMediaQuery } from '@mui/material';
 import Image from 'components/Image';
+import { tokens } from 'tokens';
 
 export const Card = ({ externalLink, imgAlt, imgPath, name }: IStack) => {
-  const smallScreen = useMediaQuery('(max-width:900px)'); // TODO FIX
+  const smallScreen = useMediaQuery(`(max-width:${tokens.breakpoints.md}px)`);
   return (
     <MUIStack>
       <Link

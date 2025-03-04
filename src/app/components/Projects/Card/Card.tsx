@@ -1,82 +1,54 @@
 import type IProjectItem from 'types/IProjectItem';
-import { Typography } from '@mui/material';
+import { Link, Stack, Typography } from '@mui/material';
 import variables from 'common/variables.json';
+import { PAGE_PADDING } from 'components';
 import Image from 'components/Image';
-import styled from 'styled-components';
 
-type ISCard = {
+type CardProps = {
   active?: boolean;
-  cardWidth: number;
-};
-
-const StyledCard = styled.div<ISCard>`
-  width: ${props => props.cardWidth}px;
-  background-color: ${variables.colors.primaryTransparent};
-  box-shadow: 1px 1px 20px -5px rgba(0, 0, 0, 0.7);
-  margin: 0.5rem;
-  border-radius: 1%;
-  height: 100%;
-
-  a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-  }
-
-  img {
-    width: ${props => props.cardWidth}px;
-    border-radius: 1%;
-    /*${props =>
-    props.active
-      ? `width: 500px; height: 400px;`
-      : ''} TODO IMPROVE CAROUSEL STYLE*/
-  }
-
-  .description {
-    line-height: 1.5rem;
-    padding: 0 1.5rem 1.5rem 1.5rem;
-    text-align: justify;
-    margin: auto 0;
-  }
-
-  @media screen and (max-width: ${variables.breakpoints.phone}) {
-    .projectName {
-      padding: 0 0 0.5rem 0;
-      margin: 1rem 1rem 0.5rem 1rem;
-    }
-
-    .description {
-      line-height: 1.25rem;
-      padding: 0 1rem 1rem 1rem;
-    }
-  }
-
-  //${props => (props.active ? `transform: scale(1.1);` : '')}
-`;
-
-type Props = {
-  active?: boolean;
-  cardWidth?: number;
 } & IProjectItem;
 
+export const CARD_MAX_WIDTH = 500;
+
+const CARD_MARGIN = '0.5rem';
+
 export const Card = ({
-  cardWidth = 500,
   description,
   externalLink,
   imgAlt,
   imgPath,
   name,
-}: Props) => (
-  <StyledCard cardWidth={cardWidth}>
-    <a href={externalLink} target="_blank" rel="noreferrer">
-      <Image src={imgPath} alt={imgAlt} />
+}: CardProps) => (
+  <Stack
+    m={`0 ${CARD_MARGIN}`}
+    sx={{
+      backgroundColor: variables.colors.primaryTransparent,
+      borderRadius: 0.1,
+      boxShadow: '1px 1px 20px -5px rgba(0, 0, 0, 0.7)',
+      display: 'flex',
+      height: 1,
+      maxWidth: { md: CARD_MAX_WIDTH, xs: `calc(100vw - ${PAGE_PADDING.xs} - ${PAGE_PADDING.xs} - ${CARD_MARGIN} - ${CARD_MARGIN})` },
+      width: CARD_MAX_WIDTH,
+    }}
+  >
+    <Link
+      href={externalLink}
+      target="_blank"
+      rel="noreferrer"
+      underline="none"
+      sx={{ color: 'white', display: 'flex', flexDirection: 'column', flexGrow: 1 }}
+    >
+      <Image
+        src={imgPath}
+        alt={imgAlt}
+        style={{ borderRadius: '1%', width: '100%' }}
+      />
       <Typography
         variant="h3"
-        className="projectName"
+        p={{ md: '1rem 1.5rem 0.5rem 1.5rem', xs: '0 0 0.5rem 0' }}
+        m={{ md: 0, xs: '1rem 1rem 0.5rem 1rem' }}
+        mb="0.5rem"
         sx={{
-          marginBottom: '0.5rem',
-          padding: '1rem 1.5rem 0.5rem 1.5rem',
           textDecorationColor: variables.colors.contrast,
           textDecorationLine: 'underline',
           textDecorationThickness: 1,
@@ -85,7 +57,12 @@ export const Card = ({
       >
         {name}
       </Typography>
-      <p className="description">{description}</p>
-    </a>
-  </StyledCard>
+      <Typography
+        p={{ md: '0 1.5rem 1.5rem 1.5rem', xs: '0 1rem 1rem 1rem' }}
+        m="auto"
+      >
+        {description}
+      </Typography>
+    </Link>
+  </Stack>
 );

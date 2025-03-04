@@ -18,7 +18,7 @@ const Background = (
   />
 );
 
-export const PAGE_PADDING = { md: '4rem', xs: '1.5rem' };
+export const PAGE_PADDING = { md: '4rem', xs: '1rem' };
 
 export const BasePage = ({ children }: PropsWithChildren) => (
   <>

@@ -14,12 +14,14 @@ const Line = (
 );
 
 export const Socials = () => (
-  <Stack sx={{
-    bottom: 0,
-    left: 0,
-    position: { md: 'fixed', xs: 'static' },
-    width: { md: PAGE_PADDING.md, xs: 'auto' },
-  }}
+  <Stack
+    pt={{ md: 0, xs: '1rem' }}
+    sx={{
+      bottom: 0,
+      left: 0,
+      position: { md: 'fixed', xs: 'static' },
+      width: { md: PAGE_PADDING.md, xs: 'auto' },
+    }}
   >
     <List sx={{
       alignItems: 'center',
