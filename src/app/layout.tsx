@@ -35,7 +35,7 @@ const RootLayout = ({
       <link rel="manifest" href=" manifest.json" />
       <title>Portfolio Tiago Simionato</title>
     </head>
-    <body className={poppins.className} style={{ display: 'flex', flexDirection: 'column' }}>
+    <body className={poppins.className}>
       <Providers>
         {children}
       </Providers>
