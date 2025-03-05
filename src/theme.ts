@@ -1,5 +1,4 @@
 import { createTheme } from '@mui/material';
-import { poppins } from 'app/layout';
 import { tokens } from 'tokens';
 
 export const theme = createTheme({
@@ -67,7 +66,7 @@ export const theme = createTheme({
     body1: {
       textAlign: 'justify',
     },
-    fontFamily: poppins.style.fontFamily,
+    fontFamily: 'Poppins, "Poppins Fallback"',
     h1: {
       '@media (min-width:900px)': {
         fontSize: '1.75rem',

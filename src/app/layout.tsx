@@ -2,7 +2,7 @@ import { Poppins } from 'next/font/google';
 import { Providers } from 'providers';
 import '@splidejs/react-splide/css';
 
-export const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800', '900'] });
+const _Poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800', '900'] });
 
 const RootLayout = ({
   children,
@@ -36,7 +36,7 @@ const RootLayout = ({
       <link rel="manifest" href=" manifest.json" />
       <title>Portfolio Tiago Simionato</title>
     </head>
-    <body className={poppins.className}>
+    <body>
       <Providers>
         {children}
       </Providers>
