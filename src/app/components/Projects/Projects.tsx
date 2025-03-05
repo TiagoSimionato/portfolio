@@ -5,22 +5,24 @@ import { tokens } from 'tokens';
 import { Card, CARD_MAX_WIDTH } from './Card';
 
 export const Projects = () => (
-  <Stack py="2rem" sx={{
-    '.splide': {
-      p: { md: '0 3rem 2rem 3rem', xs: '0 0 2rem 0' },
-    },
-    '.splide__arrow': {
-      backgroundColor: tokens.colors.contrast,
-      opacity: 1,
-      top: { md: '50%', xs: `min(21vw, ${CARD_MAX_WIDTH * 0.242}px)` },
-    },
-    '.splide__arrow:hover': {
-      backgroundColor: tokens.colors.contrastSaturated,
-    },
-    '.splide__pagination': {
-      bottom: 0,
-    },
-  }}
+  <Stack
+    py="2rem"
+    sx={{
+      '.splide': {
+        p: { md: '0 3rem 2rem 3rem', xs: '0 0 2rem 0' },
+      },
+      '.splide__arrow': {
+        backgroundColor: tokens.colors.contrast,
+        opacity: 1,
+        top: { md: '50%', xs: `min(21vw, ${CARD_MAX_WIDTH * 0.242}px)` },
+      },
+      '.splide__arrow:hover': {
+        backgroundColor: tokens.colors.contrastSaturated,
+      },
+      '.splide__pagination': {
+        bottom: 0,
+      },
+    }}
   >
     <Typography variant="h2" textAlign="center" pb={{ md: '3.75rem', xs: '1.5rem' }}>
       Projetos realizados

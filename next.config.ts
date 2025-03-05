@@ -1,20 +1,18 @@
-import type { NextConfig } from 'next'
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  async redirects() {
-    return [
-      {
-        source: '/:foo',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/:foo/:foo*',
-        destination: '/',
-        permanent: true,
-      },
-    ]
-  },
-}
+  redirects: async () => [
+    {
+      destination: '/',
+      permanent: true,
+      source: '/:foo',
+    },
+    {
+      destination: '/',
+      permanent: true,
+      source: '/:foo/:foo*',
+    },
+  ],
+};
 
 export default nextConfig;

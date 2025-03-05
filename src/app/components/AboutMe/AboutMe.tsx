@@ -3,13 +3,15 @@ import { Avatar } from 'components';
 import { tokens } from 'tokens';
 
 export const AboutMe = () => (
-  <Stack py="2rem" sx={{
-    alignItems: 'center',
-    flexDirection: { md: 'row', xs: 'column' },
-    gap: '2rem',
-    margin: 'auto',
-    maxWidth: tokens.breakpoints.xl,
-  }}
+  <Stack
+    py="2rem"
+    sx={{
+      alignItems: 'center',
+      flexDirection: { md: 'row', xs: 'column' },
+      gap: '2rem',
+      margin: 'auto',
+      maxWidth: tokens.breakpoints.xl,
+    }}
   >
     <Avatar />
     <Stack sx={{ gap: '1.5rem' }}>
