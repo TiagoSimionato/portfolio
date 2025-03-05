@@ -53,6 +53,7 @@ export const theme = createTheme({
     },
   },
   palette: {
+    background: { paper: tokens.colors.primary },
     primary: { main: tokens.colors.contrast },
     text: {
       primary: tokens.colors.white,

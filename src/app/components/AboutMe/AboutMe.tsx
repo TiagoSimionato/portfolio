@@ -3,7 +3,7 @@ import { Avatar } from 'components';
 import { tokens } from 'tokens';
 
 export const AboutMe = () => (
-  <Stack sx={{
+  <Stack py="2rem" sx={{
     alignItems: 'center',
     flexDirection: { md: 'row', xs: 'column' },
     gap: '2rem',
@@ -15,10 +15,13 @@ export const AboutMe = () => (
     <Stack sx={{ gap: '1.5rem' }}>
       <Typography variant="h2">Sobre mim</Typography>
       <Typography>
-        Sou desenvolvedor apaixonado por tecnologia, lógica e desafios! Por causa da minha vontade de dar mais vida aos códigos que desenvolvia durante a graduação decidi me especializar em Front End, assim poderia desenvolver aplicações com um grau de contato mais direto com o usuário final. Desde então aprendi a utilizar diversas tecnlogias usadas no Front, sendo meu framework principal o React.js
+        Sou desenvolvedor apaixonado por tecnologia, lógica e desafios! Por causa da minha vontade de dar mais vida aos códigos que desenvolvia durante a graduação decidi me especializar em Front End, tendo como meu framework principal o React.
       </Typography>
       <Typography>
-        Gosto de estar sempre aprendendo coisas novas e minha principal realização é ver as aplicações que desenvolvo sendo úteis para as pessoas em seu dia a dia.
+        Também utilizo tecnologias voltadas para o Backend, tendo como meu foco principal o Java e todo o ecossistema Spring, tal como Spring Boot, Spring Data e Spring Security.
+      </Typography>
+      <Typography>
+        Gosto de estar sempre aprendendo coisas novas e minha maior realização é ver o resultado de meu trabalho tendo um impacto positivo na vida das pessoas.
       </Typography>
     </Stack>
   </Stack>

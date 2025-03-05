@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { tokens } from 'tokens';
 
 export const Card = ({ externalLink, img, imgAlt, name }: StackItem) => {
-  const smallScreen = useMediaQuery(`(max-width:${tokens.breakpoints.md}px)`);
+  const smallScreen = !useMediaQuery(`(min-width:${tokens.breakpoints.md}px)`);
   return (
     <Stack>
       <Link

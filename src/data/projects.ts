@@ -9,7 +9,7 @@ const projects: ProjectItem[] = [
   {
     description:
       'Glypho é um projeto de compilador para ser utilizado através da web. É um projeto FullStack que conta com uma interface FrontEnd que se conecta à API Rest do BackEnd para realizar a compilação do código escrito. Sua interface possui coloração automática de código utilizando expressões regulares e a compilação pode ser feita para 3 linguagens-algo a escolha: Java, JavaScript ou Python',
-    externalLink: 'https://tiago-simionato.github.io/GlyphoFE/',
+    externalLink: 'https://tiagosimionato.github.io/GlyphoFE/',
     img: glypho,
     imgAlt: 'Interface do Glypho',
     name: 'Glypho',

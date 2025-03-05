@@ -5,7 +5,7 @@ import { tokens } from 'tokens';
 import { Card, CARD_MAX_WIDTH } from './Card';
 
 export const Projects = () => (
-  <Stack sx={{
+  <Stack py="2rem" sx={{
     '.splide': {
       p: { md: '0 3rem 2rem 3rem', xs: '0 0 2rem 0' },
     },

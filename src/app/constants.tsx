@@ -1,20 +1,18 @@
-import { AboutMe, Hero, Projects, TechStack } from 'app/components';
-
 export const tabs = [
   {
-    content: <Hero key="hero" />,
+    icon: 'bx bxs-home',
     label: 'Home',
   },
   {
-    content: <AboutMe key="about" />,
+    icon: 'bx bxs-user',
     label: 'Sobre mim',
   },
   {
-    content: <Projects key="project" />,
+    icon: 'bx bxs-grid',
     label: 'Projetos',
   },
   {
-    content: <TechStack key="techStack" />,
+    icon: 'bx bx-code-alt',
     label: 'Tecnologias',
   },
 ] as const;
