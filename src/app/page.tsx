@@ -5,7 +5,7 @@ import { useTabStore } from 'stores';
 import { Drawer } from './components'; import { AboutMe, Hero, Projects, TechStack } from 'app/components';
 
 const HomePage = () => {
-  const { tab } = useTabStore();
+  const { tab = 0 } = useTabStore();
 
   const content = [
     <Hero key="hero" />,
