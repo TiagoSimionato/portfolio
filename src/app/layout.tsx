@@ -12,10 +12,6 @@ const RootLayout = ({
   <html lang="pt-br">
     <head>
       <link rel="icon" href="synthsun.ico" />
-      <link
-        rel="stylesheet"
-        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
-      />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#451952" />
       <meta
@@ -33,7 +29,7 @@ const RootLayout = ({
       <meta property="og:url" content="https://tiagodev.vercel.app/" />
       <meta property="og:site_name" content="Portfolio de Tiago Simionato" />
 
-      <link rel="manifest" href=" manifest.json" />
+      <link rel="manifest" href="manifest.json" />
       <title>Portfolio Tiago Simionato</title>
     </head>
     <body>

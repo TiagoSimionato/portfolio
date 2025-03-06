@@ -33,21 +33,21 @@ export const Socials = () => (
     }}
     >
       {Line}
-      {socials.map(({ className, externalLink }) => (
-        <ListItem key={className} sx={{ justifyContent: 'center', width: 'fit-content' }} disablePadding>
+      {socials.map(({ externalLink, Icon }) => (
+        <ListItem key={externalLink} sx={{ justifyContent: 'center', width: 'fit-content' }} disablePadding>
           <Link
             href={externalLink}
-            className={className}
             target="_blank"
             rel="noreferrer"
             sx={{
               ':hover': {
                 scale: 1.2,
               },
-              'fontSize': 30,
               'transition': '0.1s ease-out',
             }}
-          />
+          >
+            <Icon sx={{ fontSize: 30 }} />
+          </Link>
         </ListItem>
       ))}
       {Line}

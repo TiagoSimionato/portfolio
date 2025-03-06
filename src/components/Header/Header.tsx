@@ -1,3 +1,4 @@
+import { Menu as MenuIcon } from '@mui/icons-material';
 import { Button, Stack, Tab, Tabs, Typography } from '@mui/material';
 import { tabs } from 'app/constants';
 import { useDrawerStore, useTabStore } from 'stores';
@@ -27,10 +28,11 @@ export const Header = () => {
         Portfolio
       </Typography>
       <Button
-        className="bx bx-menu"
         onClick={() => setDrawerStore(true)}
-        sx={{ fontSize: '2.5rem', visibility: { md: 'hidden', xs: undefined } }}
-      />
+        sx={{ visibility: { md: 'hidden', xs: undefined } }}
+      >
+        <MenuIcon sx={{ fontSize: '2rem' }} />
+      </Button>
       <Tabs value={tab} onChange={(_, value) => setTabStore(value)} sx={{ display: { md: 'flex', xs: 'none' } }}>
         {tabs.map(({ label }, index) => (
           <Tab key={label} label={label} value={index} sx={{ paddingY: '1.5rem' }} />
