@@ -8,7 +8,21 @@ export const Header = () => {
   const { setTabStore, tab } = useTabStore();
 
   return (
-    <Stack direction="row" justifyContent="space-between" alignItems="center" minHeight={65} paddingX={{ md: '4rem', xs: '1rem' }} sx={{ backdropFilter: 'blur(5px)', backgroundColor: tokens.colors.primaryTransparent }}>
+    <Stack
+      component="header"
+      direction="row"
+      sx={{
+        alignItems: 'center',
+        backdropFilter: 'blur(5px)',
+        backgroundColor: tokens.colors.primaryTransparent,
+        justifyContent: 'space-between',
+        minHeight: 65,
+        paddingX: { md: '4rem', xs: '1rem' },
+        position: 'sticky',
+        top: 0,
+        zIndex: 2,
+      }}
+    >
       <Typography variant="h1">
         Portfolio
       </Typography>
