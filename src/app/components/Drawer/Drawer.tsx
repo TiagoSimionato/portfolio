@@ -10,7 +10,7 @@ export const Drawer = () => {
     <MUIDrawer open={open} onClose={() => setDrawerStore(false)} anchor="right">
       <Box width={250} py="2rem">
         <List>
-          {tabs.map(({ icon, label }, index) => (
+          {tabs.map(({ Icon, label }, index) => (
             <ListItem
               key={label}
               sx={{ gap: '1rem', py: '2rem' }}
@@ -19,7 +19,7 @@ export const Drawer = () => {
                 setDrawerStore(false);
               }}
             >
-              <Box className={icon} sx={{ fontSize: '1.5rem' }} aria-hidden />
+              <Icon sx={{ fontSize: '1.5rem' }} aria-hidden />
               {label}
             </ListItem>
           ))}

@@ -1,18 +1,20 @@
+import { Apps, Code, Home, Person } from '@mui/icons-material';
+
 export const tabs = [
   {
-    icon: 'bx bxs-home',
+    Icon: Home,
     label: 'Home',
   },
   {
-    icon: 'bx bxs-user',
+    Icon: Person,
     label: 'Sobre mim',
   },
   {
-    icon: 'bx bxs-grid',
+    Icon: Apps,
     label: 'Projetos',
   },
   {
-    icon: 'bx bx-code-alt',
+    Icon: Code,
     label: 'Tecnologias',
   },
 ] as const;

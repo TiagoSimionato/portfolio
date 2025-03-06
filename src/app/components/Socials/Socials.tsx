@@ -33,7 +33,7 @@ export const Socials = () => (
     }}
     >
       {Line}
-      {socials.map(({ externalLink, Icon }) => (
+      {socials.map(({ externalLink, Icon, label }) => (
         <ListItem key={externalLink} sx={{ justifyContent: 'center', width: 'fit-content' }} disablePadding>
           <Link
             href={externalLink}
@@ -46,7 +46,7 @@ export const Socials = () => (
               'transition': '0.1s ease-out',
             }}
           >
-            <Icon sx={{ fontSize: 30 }} />
+            <Icon sx={{ fontSize: 30 }} aria-label={label} />
           </Link>
         </ListItem>
       ))}

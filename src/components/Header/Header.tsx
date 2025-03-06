@@ -30,8 +30,9 @@ export const Header = () => {
       <Button
         onClick={() => setDrawerStore(true)}
         sx={{ visibility: { md: 'hidden', xs: undefined } }}
+        aria-label="Menu"
       >
-        <MenuIcon sx={{ fontSize: '2rem' }} />
+        <MenuIcon sx={{ fontSize: '2rem' }} aria-hidden />
       </Button>
       <Tabs value={tab} onChange={(_, value) => setTabStore(value)} sx={{ display: { md: 'flex', xs: 'none' } }}>
         {tabs.map(({ label }, index) => (
