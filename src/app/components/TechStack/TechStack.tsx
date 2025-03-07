@@ -43,7 +43,7 @@ export const TechStack = () => (
       {[1, 2].map((_, index) => (
         <MUISTack
           key={`wrapper_${_}`}
-          className={`wrapper_${index}`}
+          className={`wrapper wrapper_${index}`}
           sx={{
             animation: { md: 'stackSlide infinite 35s linear', xs: 'none' },
             display: index === 1 ? { md: 'inline-block', xs: 'none' } : 'inline-block',
