@@ -21,7 +21,6 @@ export const Header = () => {
         paddingX: { md: '4rem', xs: '1rem' },
         position: 'sticky',
         top: 0,
-        zIndex: 2,
       }}
     >
       <Typography variant="h1">

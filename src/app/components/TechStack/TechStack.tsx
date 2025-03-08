@@ -42,7 +42,8 @@ export const TechStack = () => (
     >
       {[1, 2].map((_, index) => (
         <MUISTack
-          className={`wrapper_${index}`}
+          aria-hidden={index > 0}
+          className={`wrapper wrapper_${index}`}
           key={`wrapper_${_}`}
           sx={{
             animation: { md: 'stackSlide infinite 35s linear', xs: 'none' },
@@ -52,7 +53,7 @@ export const TechStack = () => (
           }}
         >
           <List sx={{
-            '::after': {
+            '::before': {
               animation: 'borderAnimation 5s linear infinite',
               bgcolor: tokens.colors.contrast,
               content: { md: 'none', xs: '""' },
@@ -62,7 +63,6 @@ export const TechStack = () => (
               transform: 'scaleY(3)',
               translate: '-50%',
               width: 0.3,
-              zIndex: -1,
             },
             'alignItems': 'center',
             'display': { md: 'flex', xs: 'grid' },
@@ -73,11 +73,6 @@ export const TechStack = () => (
             'rowGap': '1rem',
           }}
           >
-            {stacks.map(stack => (
-              <ListItem key={stack.name} sx={{ justifyContent: 'center', zIndex: 1 }}>
-                <Card {...stack} />
-              </ListItem>
-            ))}
             <MUISTack
               aria-hidden
               sx={{
@@ -86,9 +81,13 @@ export const TechStack = () => (
                 display: { md: 'none', xs: 'static' },
                 inset: '5px',
                 position: 'absolute',
-                zIndex: 0,
               }}
             />
+            {stacks.map(stack => (
+              <ListItem key={stack.name} sx={{ justifyContent: 'center' }}>
+                <Card {...stack} tabIndex={-index} />
+              </ListItem>
+            ))}
           </List>
         </MUISTack>
       ))}

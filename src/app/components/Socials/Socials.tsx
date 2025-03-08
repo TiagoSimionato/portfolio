@@ -42,6 +42,7 @@ export const Socials = () => (
               ':hover': {
                 scale: 1.2,
               },
+              'display': 'flex',
               'transition': '0.1s ease-out',
             }}
             target="_blank"
