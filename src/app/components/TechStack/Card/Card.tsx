@@ -3,11 +3,7 @@ import { Link, Stack, Typography, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import { tokens } from 'tokens';
 
-type StackProps = StackItem & {
-  tabIndex?: number;
-};
-
-export const Card = ({ externalLink, img, imgAlt, name, tabIndex }: StackProps) => {
+export const Card = ({ externalLink, img, imgAlt, name }: StackItem) => {
   const smallScreen = !useMediaQuery(`(min-width:${tokens.breakpoints.md}px)`);
 
   return (
@@ -16,7 +12,6 @@ export const Card = ({ externalLink, img, imgAlt, name, tabIndex }: StackProps) 
         href={externalLink || '#'}
         rel="noreferrer"
         sx={{ ':hover *': { color: tokens.colors.contrast } }}
-        tabIndex={tabIndex}
         target="_blank"
       >
         <Image
