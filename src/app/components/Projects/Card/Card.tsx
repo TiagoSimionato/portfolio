@@ -33,7 +33,6 @@ export const Card = ({
   >
     <Link
       href={externalLink}
-      target="_blank"
       rel="noreferrer"
       sx={{
         ':hover *': {
@@ -43,28 +42,29 @@ export const Card = ({
         'flexDirection': 'column',
         'flexGrow': 1,
       }}
+      target="_blank"
     >
       <Image
-        src={img}
         alt={imgAlt}
+        src={img}
         style={{ borderRadius: '1%', height: 'fit-content', width: '100%' }}
       />
       <Typography
-        variant="h3"
-        p={{ md: '1rem 1.5rem', xs: 0 }}
         m={{ md: 0, xs: '1rem' }}
+        p={{ md: '1rem 1.5rem', xs: 0 }}
         sx={{
           textDecorationColor: tokens.colors.contrast,
           textDecorationLine: 'underline',
           textDecorationThickness: 1,
           textUnderlineOffset: 13,
         }}
+        variant="h3"
       >
         {name}
       </Typography>
       <Typography
-        p={{ md: '0 1.5rem 1.5rem 1.5rem', xs: '0 1rem 1rem 1rem' }}
         m="auto"
+        p={{ md: '0 1.5rem 1.5rem 1.5rem', xs: '0 1rem 1rem 1rem' }}
       >
         {description}
       </Typography>

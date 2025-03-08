@@ -7,19 +7,19 @@ export const Drawer = () => {
   const { setTabStore } = useTabStore();
 
   return (
-    <MUIDrawer open={open} onClose={() => setDrawerStore(false)} anchor="right">
-      <Box width={250} py="2rem">
+    <MUIDrawer anchor="right" onClose={() => setDrawerStore(false)} open={open}>
+      <Box py="2rem" width={250}>
         <List>
           {tabs.map(({ Icon, label }, index) => (
             <ListItem
               key={label}
-              sx={{ gap: '1rem', py: '2rem' }}
               onClick={() => {
                 setTabStore(index);
                 setDrawerStore(false);
               }}
+              sx={{ gap: '1rem', py: '2rem' }}
             >
-              <Icon sx={{ fontSize: '1.5rem' }} aria-hidden />
+              <Icon aria-hidden sx={{ fontSize: '1.5rem' }} />
               {label}
             </ListItem>
           ))}

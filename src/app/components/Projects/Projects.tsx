@@ -1,6 +1,6 @@
 import { Stack, Typography } from '@mui/material';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import projectsData from 'data/projects';
+import { projects } from 'data';
 import { tokens } from 'tokens';
 import { Card, CARD_MAX_WIDTH } from './Card';
 
@@ -24,7 +24,7 @@ export const Projects = () => (
       },
     }}
   >
-    <Typography variant="h2" textAlign="center" pb={{ md: '3.75rem', xs: '1.5rem' }}>
+    <Typography pb={{ md: '3.75rem', xs: '1.5rem' }} textAlign="center" variant="h2">
       Projetos realizados
     </Typography>
     <Splide
@@ -35,14 +35,14 @@ export const Projects = () => (
       }}
       tag="div"
     >
-      {projectsData.map(item => (
+      {projects.map(item => (
         <SplideSlide key={item.name}>
           <Card
-            name={item.name}
             description={item.description}
+            externalLink={item.externalLink}
             img={item.img}
             imgAlt={item.imgAlt}
-            externalLink={item.externalLink}
+            name={item.name}
           />
         </SplideSlide>
       ))}

@@ -11,7 +11,7 @@ type ConditionalProps = {
   content?: never;
   loop?: false;
 };
-export type TypedTypographyProps = Omit<TypographyProps, 'content' | 'children'> & ConditionalProps;
+export type TypedTypographyProps = Omit<TypographyProps, 'children' | 'content'> & ConditionalProps;
 
 export const TypedTypography = ({ children, content, loop, sx, ...rest }: TypedTypographyProps) => {
   const text = loop ? content[0] : typeof children === 'string' ? children : '';

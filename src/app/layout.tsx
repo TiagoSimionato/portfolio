@@ -11,25 +11,25 @@ const RootLayout = ({
 }) => (
   <html lang="pt-br">
     <head>
-      <link rel="icon" href="synthsun.ico" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="theme-color" content="#451952" />
+      <link href="synthsun.ico" rel="icon" />
+      <meta content="width=device-width, initial-scale=1" name="viewport" />
+      <meta content="#451952" name="theme-color" />
       <meta
+        content="Website showcasing the portfolio of Tiago Simionato"
         name="description"
-        content="Website showcasing the portfolio of Tiago Simionato"
       />
-      <meta property="og:title" content="Portfolio | Tiago Simionato" />
-      <meta property="og:type" content="website" />
+      <meta content="Portfolio | Tiago Simionato" property="og:title" />
+      <meta content="website" property="og:type" />
       <meta
-        property="og:description"
         content="Website showcasing the portfolio of Tiago Simionato"
+        property="og:description"
       />
-      <meta property="og:image" content="https://github.com/tiagosimionato.png" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta property="og:url" content="https://tiagodev.vercel.app/" />
-      <meta property="og:site_name" content="Portfolio de Tiago Simionato" />
+      <meta content="https://github.com/tiagosimionato.png" property="og:image" />
+      <meta content="summary_large_image" name="twitter:card" />
+      <meta content="https://tiagodev.vercel.app/" property="og:url" />
+      <meta content="Portfolio de Tiago Simionato" property="og:site_name" />
 
-      <link rel="manifest" href="manifest.json" />
+      <link href="manifest.json" rel="manifest" />
       <title>Portfolio Tiago Simionato</title>
     </head>
     <body>

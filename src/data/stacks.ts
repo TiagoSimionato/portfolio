@@ -9,7 +9,7 @@ import react from 'assets/images/react.webp';
 import tailwindcss from 'assets/images/tailwindcss.webp';
 import ts from 'assets/images/ts.webp';
 
-const stacks: StackItem[] = [
+export const stacks: StackItem[] = [
   {
     externalLink: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript',
     img: js,
@@ -65,5 +65,3 @@ const stacks: StackItem[] = [
     name: 'TailWind CSS',
   },
 ];
-
-export default stacks;

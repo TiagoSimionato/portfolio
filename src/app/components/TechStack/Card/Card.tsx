@@ -5,21 +5,22 @@ import { tokens } from 'tokens';
 
 export const Card = ({ externalLink, img, imgAlt, name }: StackItem) => {
   const smallScreen = !useMediaQuery(`(min-width:${tokens.breakpoints.md}px)`);
+
   return (
     <Stack>
       <Link
         href={externalLink || '#'}
-        target="_blank"
         rel="noreferrer"
         sx={{ ':hover *': { color: tokens.colors.contrast } }}
+        target="_blank"
       >
         <Image
-          src={img}
           alt={imgAlt}
           height={smallScreen ? 80 : 150}
+          src={img}
           width={smallScreen ? 80 : 150}
         />
-        <Typography textAlign="center" mt="1rem" mb="0.5rem">{name}</Typography>
+        <Typography mb="0.5rem" mt="1rem" textAlign="center">{name}</Typography>
       </Link>
     </Stack>
   );

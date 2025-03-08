@@ -1,7 +1,7 @@
 import type { ReportHandler } from 'web-vitals';
 
 const reportWebVitals = (onPerfEntry?: ReportHandler) => {
-  if (onPerfEntry && onPerfEntry instanceof Function) {
+  if (onPerfEntry && typeof onPerfEntry === 'function') {
     import('web-vitals').then(({ getCLS, getFCP, getFID, getLCP, getTTFB }) => {
       getCLS(onPerfEntry);
       getFID(onPerfEntry);

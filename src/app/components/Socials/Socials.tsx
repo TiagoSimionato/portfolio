@@ -34,10 +34,9 @@ export const Socials = () => (
     >
       {Line}
       {socials.map(({ externalLink, Icon, label }) => (
-        <ListItem key={externalLink} sx={{ justifyContent: 'center', width: 'fit-content' }} disablePadding>
+        <ListItem disablePadding key={externalLink} sx={{ justifyContent: 'center', width: 'fit-content' }}>
           <Link
             href={externalLink}
-            target="_blank"
             rel="noreferrer"
             sx={{
               ':hover': {
@@ -45,8 +44,9 @@ export const Socials = () => (
               },
               'transition': '0.1s ease-out',
             }}
+            target="_blank"
           >
-            <Icon sx={{ fontSize: 30 }} aria-label={label} />
+            <Icon aria-label={label} sx={{ fontSize: 30 }} />
           </Link>
         </ListItem>
       ))}

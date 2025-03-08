@@ -1,5 +1,5 @@
 import { List, ListItem, Stack as MUISTack, Typography } from '@mui/material';
-import stacks from 'data/stacks';
+import { stacks } from 'data';
 import { tokens } from 'tokens';
 import { Card } from './Card';
 
@@ -26,7 +26,7 @@ export const TechStack = () => (
       'flexGrow': 1,
     }}
   >
-    <Typography variant="h2" textAlign="center" pb={{ md: '3.75rem', xs: '1.5rem' }}>
+    <Typography pb={{ md: '3.75rem', xs: '1.5rem' }} textAlign="center" variant="h2">
       Tecnologias conhecidas
     </Typography>
     <MUISTack
@@ -42,8 +42,8 @@ export const TechStack = () => (
     >
       {[1, 2].map((_, index) => (
         <MUISTack
+          className={`wrapper_${index}`}
           key={`wrapper_${_}`}
-          className={`wrapper wrapper_${index}`}
           sx={{
             animation: { md: 'stackSlide infinite 35s linear', xs: 'none' },
             display: index === 1 ? { md: 'inline-block', xs: 'none' } : 'inline-block',

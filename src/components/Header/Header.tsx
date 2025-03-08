@@ -28,15 +28,15 @@ export const Header = () => {
         Portfolio
       </Typography>
       <Button
+        aria-label="Menu"
         onClick={() => setDrawerStore(true)}
         sx={{ visibility: { md: 'hidden', xs: undefined } }}
-        aria-label="Menu"
       >
-        <MenuIcon sx={{ fontSize: '2rem' }} aria-hidden />
+        <MenuIcon aria-hidden sx={{ fontSize: '2rem' }} />
       </Button>
-      <Tabs value={tab} onChange={(_, value) => setTabStore(value)} sx={{ display: { md: 'flex', xs: 'none' } }}>
+      <Tabs onChange={(_, value) => setTabStore(value)} sx={{ display: { md: 'flex', xs: 'none' } }} value={tab}>
         {tabs.map(({ label }, index) => (
-          <Tab key={label} label={label} value={index} sx={{ paddingY: '1.5rem' }} />
+          <Tab key={label} label={label} sx={{ paddingY: '1.5rem' }} value={index} />
         ))}
       </Tabs>
     </Stack>

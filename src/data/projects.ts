@@ -5,7 +5,7 @@ import organo from 'assets/images/organo.webp';
 import ladingPage from 'assets/images/sew.webp';
 import sew from 'assets/images/sewlp.webp';
 
-const projects: ProjectItem[] = [
+export const projects: ProjectItem[] = [
   {
     description:
       'Glypho é um projeto de compilador para ser utilizado através da web. É um projeto FullStack que conta com uma interface FrontEnd que se conecta à API Rest do BackEnd para realizar a compilação do código escrito. Sua interface possui coloração automática de código utilizando expressões regulares e a compilação pode ser feita para 3 linguagens-algo a escolha: Java, JavaScript ou Python',
@@ -47,5 +47,3 @@ const projects: ProjectItem[] = [
     name: 'Soft Everywhere Landing Page',
   },
 ];
-
-export default projects;
