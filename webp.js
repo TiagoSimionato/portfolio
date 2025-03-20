@@ -2,8 +2,8 @@ import imagemin from "imagemin";
 import webp from "imagemin-webp";
 import gif2webp from "imagemin-gif2webp";
 
-const outputFolder = "./public/assets/images/";
-const inputFolder = "public/assets/images/";
+const outputFolder = "./src/assets/images/";
+const inputFolder = "src/assets/images/";
 
 const produceWebP = async () => {
   await imagemin([inputFolder + "*.png"], {
