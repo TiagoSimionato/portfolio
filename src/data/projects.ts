@@ -26,9 +26,9 @@ export const projects: ProjectItem[] = [
   {
     description:
       'O projeto consiste em uma Landing Page moderna, responsiva e acessível. A página conta com um carrosel, diversas animações e foi desenvolvida utilizando React e Tailwind CSS',
-    externalLink: 'https://frontend-test-tiago.vercel.app/',
+    externalLink: 'https://modern-lp.vercel.app/',
     img: ladingPage,
-    imgAlt: 'Interface do Soft everywhere',
+    imgAlt: 'Landing page moderna',
     name: 'Modern Landing Page',
   },
   {
