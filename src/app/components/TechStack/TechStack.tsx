@@ -39,7 +39,7 @@ export const TechStack = () => (
         'display': 'grid',
         'flexGrow': { md: 1, xs: 0 },
         'gap': { md: '1rem', xs: 0 },
-        'gridTemplateColumns': { md: 'repeat(auto-fit, minmax(160px, 1fr))', xs: 'repeat(auto-fit, minmax(115px, 1fr))' },
+        'gridTemplateColumns': { md: 'repeat(auto-fit, minmax(160px, 1fr))', xl: 'repeat(auto-fit, minmax(200px, 1fr))', xs: 'repeat(auto-fit, minmax(115px, 1fr))' },
         'justifyContent': 'space-around',
         'overflow': 'hidden',
         'padding': { md: '1rem', xs: '1rem 0' },

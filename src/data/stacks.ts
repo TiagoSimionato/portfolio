@@ -1,67 +1,102 @@
 import type { StackItem } from 'types';
+import css from 'assets/icons/css.svg';
+import docker from 'assets/icons/docker.svg';
+import expo from 'assets/icons/expo.svg';
+import github from 'assets/icons/github.svg';
+import html from 'assets/icons/html.svg';
+import js from 'assets/icons/js.svg';
+import kubernetes from 'assets/icons/kubernetes.svg';
+import nextjs from 'assets/icons/nextjs.svg';
+import postgresql from 'assets/icons/postgresql.svg';
+import react from 'assets/icons/react.svg';
+import spring from 'assets/icons/spring.svg';
+import tailwindcss from 'assets/icons/tailwind.svg';
+import ts from 'assets/icons/ts.svg';
 import astro from 'assets/images/astro.png';
-import css from 'assets/images/css.webp';
-import github from 'assets/images/github.webp';
-import html from 'assets/images/html.webp';
-import js from 'assets/images/js.webp';
-import postgresql from 'assets/images/postgresql.webp';
-import react from 'assets/images/react.webp';
-import tailwindcss from 'assets/images/tailwindcss.webp';
-import ts from 'assets/images/ts.webp';
 
 export const stacks: StackItem[] = [
   {
-    externalLink: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript',
-    img: js,
-    imgAlt: 'logo javasript',
-    name: 'JavaSript',
+    externalLink: 'https://nextjs.org/',
+    img: nextjs,
+    imgAlt: 'Logo next.js',
+    name: 'Next.js',
   },
   {
-    externalLink: 'https://www.typescriptlang.org/',
-    img: ts,
-    imgAlt: 'logo typescript',
-    name: 'TypeScript',
+    externalLink: 'https://expo.dev/',
+    img: expo,
+    imgAlt: 'Logo expo',
+    name: 'Expo',
   },
   {
     externalLink: 'https://react.dev/',
     img: react,
-    imgAlt: 'logo react',
-    name: 'React.JS',
+    imgAlt: 'Logo react',
+    name: 'React / React Native',
+  },
+  {
+    externalLink: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript',
+    img: js,
+    imgAlt: 'Logo javascript',
+    name: 'JavaScript',
+  },
+  {
+    externalLink: 'https://www.typescriptlang.org/',
+    img: ts,
+    imgAlt: 'Logo typescript',
+    name: 'TypeScript',
   },
   {
     externalLink: 'https://developer.mozilla.org/pt-BR/docs/Web/HTML',
     img: html,
-    imgAlt: 'logo html',
+    imgAlt: 'Logo html',
     name: 'HTML',
   },
   {
     externalLink: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS',
     img: css,
-    imgAlt: 'logo css',
+    imgAlt: 'Logo css',
     name: 'CSS',
   },
   {
-    externalLink: 'https://astro.build/',
-    img: astro,
-    imgAlt: 'logo astro',
-    name: 'Astro',
+    externalLink: 'https://tailwindcss.com/',
+    img: tailwindcss,
+    imgAlt: 'Logo tailwind css',
+    name: 'TailWind CSS',
+  },
+  {
+    externalLink: 'https://www.docker.com/',
+    img: docker,
+    imgAlt: 'Logo docker',
+    name: 'Docker',
+  },
+  {
+    externalLink: 'https://kubernetes.io/',
+    img: kubernetes,
+    imgAlt: 'Logo kubernetes',
+    name: 'Kubernetes',
+  },
+  {
+    externalLink: 'https://spring.io/',
+    img: spring,
+    imgAlt: 'Logo spring',
+    name: 'Spring',
   },
   {
     externalLink: 'https://www.postgresql.org/',
     img: postgresql,
-    imgAlt: 'logo postgresql',
+    imgAlt: 'Logo postgresql',
     name: 'PostgreSQL',
   },
   {
     externalLink: 'https://github.com/',
     img: github,
-    imgAlt: 'logo github',
+    imgAlt: 'Logo github',
     name: 'GitHub',
   },
   {
-    externalLink: 'https://tailwindcss.com/',
-    img: tailwindcss,
-    imgAlt: 'logo tailwind css',
-    name: 'TailWind CSS',
+    externalLink: 'https://astro.build/',
+    img: astro,
+    imgAlt: 'Logo astro',
+    name: 'Astro',
   },
 ];

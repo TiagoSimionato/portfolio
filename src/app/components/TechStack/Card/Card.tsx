@@ -11,7 +11,7 @@ export const Card = ({ externalLink, img, imgAlt, name }: StackItem) => {
       <Link
         href={externalLink || '#'}
         rel="noreferrer"
-        sx={{ ':hover *': { color: tokens.colors.contrast } }}
+        sx={{ ':hover *': { color: tokens.colors.contrast }, 'alignItems': 'center', 'display': 'flex', 'flexDirection': 'column' }}
         target="_blank"
       >
         <Image
