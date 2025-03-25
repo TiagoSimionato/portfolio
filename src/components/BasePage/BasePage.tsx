@@ -9,7 +9,7 @@ export const PAGE_PADDING = { md: '4rem', xs: '1rem' };
 export const BasePage = ({ children }: PropsWithChildren) => (
   <Stack sx={{ backgroundImage: `linear-gradient(${tokens.colors.primary},${tokens.colors.secondary})`, flexGrow: 1 }}>
     <Header />
-    <Stack flex={1} height="100%" justifyContent="center" paddingX={PAGE_PADDING}>
+    <Stack flex={1} justifyContent="center" paddingX={PAGE_PADDING}>
       <Stack flex={1}>
         {children}
       </Stack>

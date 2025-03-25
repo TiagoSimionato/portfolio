@@ -1,9 +1,10 @@
 import type { ProjectItem } from 'types';
 import aluraGeek from 'assets/images/alurageek.webp';
 import glypho from 'assets/images/glypho-interface.webp';
+import karden from 'assets/images/karden.webp';
 import organo from 'assets/images/organo.webp';
 import scrubin from 'assets/images/scrubin.webp';
-import ladingPage from 'assets/images/sew.webp';
+import landingPage from 'assets/images/sew.webp';
 import sew from 'assets/images/sewlp.webp';
 
 export const projects: ProjectItem[] = [
@@ -27,9 +28,17 @@ export const projects: ProjectItem[] = [
     description:
       'O projeto consiste em uma Landing Page moderna, responsiva e acessível. A página conta com um carrosel, diversas animações e foi desenvolvida utilizando React e Tailwind CSS',
     externalLink: 'https://modern-lp.vercel.app/',
-    img: ladingPage,
+    img: landingPage,
     imgAlt: 'Landing page moderna',
     name: 'Modern Landing Page',
+  },
+  {
+    description:
+      'Landing page para a Karden, uma aceleradora de e-commerces. Projeto conta com um design responsivo feito utilizando React e Tailwind',
+    externalLink: 'https://www.escolakarden.com/temp',
+    img: karden,
+    imgAlt: 'Landing page da escola Karden',
+    name: 'Landing page escola Karden',
   },
   {
     description:
